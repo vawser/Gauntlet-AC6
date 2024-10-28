@@ -1,0 +1,276 @@
+{
+  "Name": "test",
+  "FmgWrappers": [
+    {
+      "Name": "\u30A4\u30D9\u30F3\u30C8\u30C6\u30AD\u30B9\u30C8.fmg",
+      "ID": 30,
+      "Fmg": {
+        "Name": "\u30A4\u30D9\u30F3\u30C8\u30C6\u30AD\u30B9\u30C8.fmg",
+        "Entries": [
+          {
+            "ID": 110001000,
+            "Text": "WAVE INTERMISSION"
+          },
+          {
+            "ID": 110002000,
+            "Text": "WAVE 1"
+          },
+          {
+            "ID": 110002001,
+            "Text": "WAVE 2"
+          },
+          {
+            "ID": 110002002,
+            "Text": "WAVE 3"
+          },
+          {
+            "ID": 110002003,
+            "Text": "WAVE 4"
+          },
+          {
+            "ID": 110002004,
+            "Text": "WAVE 5"
+          },
+          {
+            "ID": 110002005,
+            "Text": "WAVE 6"
+          },
+          {
+            "ID": 110002006,
+            "Text": "WAVE 7"
+          },
+          {
+            "ID": 110002007,
+            "Text": "WAVE 8"
+          },
+          {
+            "ID": 110002008,
+            "Text": "WAVE 9"
+          },
+          {
+            "ID": 110002009,
+            "Text": "WAVE 10"
+          },
+          {
+            "ID": 110002010,
+            "Text": "WAVE 11"
+          },
+          {
+            "ID": 110002011,
+            "Text": "WAVE 12"
+          },
+          {
+            "ID": 110002012,
+            "Text": "WAVE 13"
+          },
+          {
+            "ID": 110002013,
+            "Text": "WAVE 14"
+          },
+          {
+            "ID": 110002014,
+            "Text": "WAVE 15"
+          },
+          {
+            "ID": 110002015,
+            "Text": "WAVE 16"
+          },
+          {
+            "ID": 110002016,
+            "Text": "WAVE 17"
+          },
+          {
+            "ID": 110002017,
+            "Text": "WAVE 18"
+          },
+          {
+            "ID": 110002018,
+            "Text": "WAVE 19"
+          },
+          {
+            "ID": 110002019,
+            "Text": "WAVE 20"
+          },
+          {
+            "ID": 110002020,
+            "Text": "WAVE 21"
+          },
+          {
+            "ID": 110002021,
+            "Text": "WAVE 22"
+          },
+          {
+            "ID": 110002022,
+            "Text": "WAVE 23"
+          },
+          {
+            "ID": 110002023,
+            "Text": "WAVE 24"
+          },
+          {
+            "ID": 110002024,
+            "Text": "WAVE 25"
+          },
+          {
+            "ID": 110002025,
+            "Text": "WAVE 26"
+          },
+          {
+            "ID": 110002026,
+            "Text": "WAVE 27"
+          },
+          {
+            "ID": 110002027,
+            "Text": "WAVE 28"
+          },
+          {
+            "ID": 110002028,
+            "Text": "WAVE 29"
+          },
+          {
+            "ID": 110002029,
+            "Text": "WAVE 30"
+          },
+          {
+            "ID": 120102000,
+            "Text": "Survive!"
+          },
+          {
+            "ID": 120102001,
+            "Text": "You did it!"
+          }
+        ],
+        "Version": 2,
+        "BigEndian": false,
+        "Unicode": true,
+        "Compression": 1
+      }
+    },
+    {
+      "Name": "\u30DF\u30C3\u30B7\u30E7\u30F3\u540D.fmg",
+      "ID": 60,
+      "Fmg": {
+        "Name": "\u30DF\u30C3\u30B7\u30E7\u30F3\u540D.fmg",
+        "Entries": [
+          {
+            "ID": 9200,
+            "Text": "Survival Trial: Grid 135"
+          }
+        ],
+        "Version": 2,
+        "BigEndian": false,
+        "Unicode": true,
+        "Compression": 1
+      }
+    },
+    {
+      "Name": "\u30DF\u30C3\u30B7\u30E7\u30F3\u6982\u8981.fmg",
+      "ID": 61,
+      "Fmg": {
+        "Name": "\u30DF\u30C3\u30B7\u30E7\u30F3\u6982\u8981.fmg",
+        "Entries": [
+          {
+            "ID": 9200,
+            "Text": "Attempt to survive for as long as possible in Grid 135.\n----------------\n"
+          }
+        ],
+        "Version": 2,
+        "BigEndian": false,
+        "Unicode": true,
+        "Compression": 1
+      }
+    },
+    {
+      "Name": "\u30DF\u30C3\u30B7\u30E7\u30F3\u76EE\u6A19.fmg",
+      "ID": 62,
+      "Fmg": {
+        "Name": "\u30DF\u30C3\u30B7\u30E7\u30F3\u76EE\u6A19.fmg",
+        "Entries": [
+          {
+            "ID": 9200,
+            "Text": "Survive for as long as possible in Grid 135"
+          }
+        ],
+        "Version": 2,
+        "BigEndian": false,
+        "Unicode": true,
+        "Compression": 1
+      }
+    },
+    {
+      "Name": "FNR_\u30E1\u30CB\u30E5\u30FC\u30C6\u30AD\u30B9\u30C8.fmg",
+      "ID": 200,
+      "Fmg": {
+        "Name": "FNR_\u30E1\u30CB\u30E5\u30FC\u30C6\u30AD\u30B9\u30C8.fmg",
+        "Entries": [
+          {
+            "ID": 40564,
+            "Text": "Sea Spider"
+          },
+          {
+            "ID": 104010,
+            "Text": "SURVIVAL"
+          },
+          {
+            "ID": 251000,
+            "Text": "SURVIVAL"
+          }
+        ],
+        "Version": 2,
+        "BigEndian": false,
+        "Unicode": true,
+        "Compression": 1
+      }
+    },
+    {
+      "Name": "FNR_\u4E00\u884C\u30D8\u30EB\u30D7.fmg",
+      "ID": 201,
+      "Fmg": {
+        "Name": "FNR_\u4E00\u884C\u30D8\u30EB\u30D7.fmg",
+        "Entries": [
+          {
+            "ID": 104010,
+            "Text": "Test your combat prowess by attempting a survival trial in one of Rubicon\u0027s locales."
+          },
+          {
+            "ID": 120030,
+            "Text": "Restart survival trial from the beginning."
+          },
+          {
+            "ID": 120031,
+            "Text": "Quit survival trial and return to the Garage."
+          }
+        ],
+        "Version": 2,
+        "BigEndian": false,
+        "Unicode": true,
+        "Compression": 1
+      }
+    },
+    {
+      "Name": "FNR_\u30C0\u30A4\u30A2\u30ED\u30B0.fmg",
+      "ID": 204,
+      "Fmg": {
+        "Name": "FNR_\u30C0\u30A4\u30A2\u30ED\u30B0.fmg",
+        "Entries": [
+          {
+            "ID": 120030,
+            "Text": "Restart survival trial from the beginning? "
+          },
+          {
+            "ID": 120031,
+            "Text": "Quit survival trial and return to the Garage? "
+          },
+          {
+            "ID": 251000,
+            "Text": "Begin survival trial?"
+          }
+        ],
+        "Version": 2,
+        "BigEndian": false,
+        "Unicode": true,
+        "Compression": 1
+      }
+    }
+  ]
+}

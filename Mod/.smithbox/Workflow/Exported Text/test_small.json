@@ -1,0 +1,22 @@
+{
+  "Name": "test_small",
+  "FmgWrappers": [
+    {
+      "Name": "\u4F1A\u8A71.fmg",
+      "ID": 1,
+      "Fmg": {
+        "Name": "\u4F1A\u8A71.fmg",
+        "Entries": [
+          {
+            "ID": 100000010,
+            "Text": "TEST ME"
+          }
+        ],
+        "Version": 2,
+        "BigEndian": false,
+        "Unicode": true,
+        "Compression": 1
+      }
+    }
+  ]
+}

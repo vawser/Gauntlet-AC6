@@ -1,0 +1,19 @@
+{
+  "ProjectName": "Gauntlet",
+  "GameRoot": "F:\\SteamLibrary\\steamapps\\common\\ARMORED CORE VI FIRES OF RUBICON\\Game",
+  "GameType": 9,
+  "PinnedParams": [
+    "NpcParam",
+    "SpEffectParam",
+    "MissionParam",
+    "NpcThinkParam",
+    "ItemLotParam"
+  ],
+  "PinnedRows": {},
+  "PinnedFields": {
+    "EquipParamWeapon": []
+  },
+  "UseLooseParams": false,
+  "PartialParams": false,
+  "LastFmgLanguageUsed": "engus"
+}

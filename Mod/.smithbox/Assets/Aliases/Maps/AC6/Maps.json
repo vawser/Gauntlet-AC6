@@ -1,0 +1,18 @@
+{
+  "list": [
+    {
+      "id": "dummy",
+      "name": "Dummy",
+      "tags": [
+        "dummy"
+      ]
+    },
+    {
+      "id": "m01_07_70_00",
+      "name": "Gauntlet: Grid 135",
+      "tags": [
+        ""
+      ]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+#-----------------------------
+# MenuLauncher
+#-----------------------------
+A top-level container. Represents the 'menu' itself.
+
+# Properties
+resource = <name>           # The .GFX file this is associated with
+titleID = <id>              # The displayed text (refers to Menu Text fmg entry ID)
+menuID = <id>               # The menu ID string
+cancelDisable = <bool>      # 
+propertyLayout = <id>       # MenuPropertyLayoutParam ID
+systemMenu = <bool>         # Display 'System Menu' prompts
+mercenaryDetails = <bool>   # Display 'Mercenary Details'
+
+#-----------------------------
+# Group
+#-----------------------------
+The top category element of the menu.
+
+captionID = <id>            # The displayed text (refers to Menu Text fmg entry ID)
+onclick = <command>         # The commands to execute when this element is clicked.
+onfocus = <command>         # The commands to execute when this element is focused on.
+onreturn = <command>        # The commands to execute when this element is returned to (via the back action).
+
+resource = <name>           # The .GFX file this is associated with
+autoHide = <bool>           # Whether this element is auto-hidden.
+expandable = <bool>         # Whether this element can expand.
+
+#-----------------------------
+# Cmd
+#-----------------------------
+The inner elements of a group element.
+
+captionID = <id>            # The displayed text (refers to Menu Text fmg entry ID)
+display = <command>         # Display logic:  uses unlockParam
+url = <command>             # Points to new menu: uses menu
+icon = <command>            # Points to icon: uses proxy
+preexec = <command>         # Pre-execution: uses util
+grayout = <command>         # Gray-out logic: uses func + eventFlag
+
+execOnce = <bool>           # Whether this is only executed once.
+autoHide = <bool>           # Whether this element is auto-hidden.
+
+#-----------------------------
+# Command Strings
+#-----------------------------
+These are the strings used in the command properties such as display, url, etc.
+
+The general structure is as follows:
+1. <command>/<target>
+2. <command>/<target>,<target>,<etc>
+3. <command>/<target>?<property>=<value>,<etc>
+
+# Commands
+unlockParam     - Points to UnlockParam_MenuCommand row
+changeCamera    - Change the Garage Camera position
+eventFlag       - Event Flag to check
+menu            - New menu to open
+proxy           - Icon to display
+util            - Script to run
+func            - Function to run
+
+#-----------------------------
+# Usage Examples
+#-----------------------------
+debugonly
+
+changeCamera/eventFlag=5001,camIdx=1
+changeCamera/camIdx=3
+
+unlockParam/10010
+
+eventFlag/3135 ?value=0,alertMsg=1040
+
+menu/equipForGarage
+menu/coloring
+menu/decal
+menu/emblemEdit
+menu/acData
+menu/partsBuy
+menu/partsSell
+menu/osUpdate
+menu/arena
+menu/onlineArena
+menu/storyMission
+menu/freeMission
+menu/trainingMission
+menu/acTest
+menu/equip
+menu/itemBuy?lineup_start=10,lineup_end=109999
+menu/itemExchange?lineup_start=110000,lineup_end=110999
+menu/itemSell
+menu/itemRenovation
+menu/mailList
+menu/optionTop
+menu/garageTop
+menu/equipForAcTest
+menu/acTestSetting
+
+proxy/newOwnParts
+proxy/newSaleParts
+proxy/newArenaRanker
+proxy/newStoryMissions
+proxy/newTraining
+
+util/preEquipMenu
+util/preDecorationMenu
+util/preOnlineArena
+util/moviePlayer?id=1
+util/retryMission_fromCheckPoint?msgID=120004
+util/retryMission_fromStart?msgID=120002
+util/retireMission?msgID=120003
+util/supplyForAcTest?msgID=120011
+util/returnToGarage?msgID=120050
+
+func/DisabledPartsBuy ?alertMsg=231010
+func/IsGrayoutOnlineArena 
+func/DisabledFreeMission ?alertMsg=104000
+func/DisabledRetryMissionFromCheckPoint
+func/DisabledRetireMission
+
+#-----------------------------
+# Widgets
+#-----------------------------
+A top-level container, contains widget definitions.
+
+# Widget
+Represents a widget.
+
+Name = <string>
+Path = <string>         # Path to the image layout
+ColorPath = <string>    # Path to the color layout
