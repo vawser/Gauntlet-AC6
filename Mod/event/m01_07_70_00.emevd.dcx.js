@@ -8,23 +8,170 @@
 // ==/EMEVD==
 
 Event(0, Default, function() {
-    // Common ESD Events
-    InitializeEsdTriggeredEvent(0, 5402, 0); // ?
-    InitializeEsdTriggeredEvent(0, 5403, 0); // Cutscene flag reset
-    InitializeEsdTriggeredEvent(0, 5404, 0); // Spawn immortality?
-    InitializeEsdTriggeredEvent(0, 5420, 0); // COMMENCE MISSION
-    
+    //===============
     // Trial System
+    //===============
     InitializeEvent(0, 3000, 0);
     
-    // TODO: edit this esd event
-    // Handles on death menu + startup effect, but includes training prompts currently
-    //InitializeEsdEvent(0, 5300, 200010, 0);
+    //===============
+    // Loot System
+    //===============
+    
+    // Wave 1
+    InitializeEvent(0, 3100, 100); 
+    InitializeEvent(1, 3100, 101); 
+    InitializeEvent(2, 3100, 102); 
+    InitializeEvent(3, 3100, 103); 
+    InitializeEvent(4, 3100, 104); 
+    InitializeEvent(5, 3100, 105); 
+    InitializeEvent(6, 3100, 106); 
+    
+    // Wave 2
+    InitializeEvent(0, 3101, 110); 
+    InitializeEvent(10, 3100, 111); 
+    InitializeEvent(11, 3100, 112); 
+    InitializeEvent(12, 3100, 113); 
+    InitializeEvent(13, 3100, 114); 
+    InitializeEvent(14, 3100, 115); 
+    InitializeEvent(15, 3100, 116); 
+    InitializeEvent(16, 3100, 117); 
+    InitializeEvent(17, 3100, 118); 
+    InitializeEvent(18, 3100, 119); 
+    
+    // Wave 3
+    InitializeEvent(20, 3100, 120); 
+    InitializeEvent(21, 3100, 121); 
+    InitializeEvent(22, 3100, 122); 
+    InitializeEvent(23, 3100, 123); 
+    InitializeEvent(24, 3100, 124); 
+    InitializeEvent(25, 3100, 125); 
+    InitializeEvent(26, 3100, 126); 
+    InitializeEvent(27, 3100, 127); 
+    InitializeEvent(28, 3100, 128); 
+    InitializeEvent(29, 3100, 129); 
+    InitializeEvent(30, 3100, 130); 
+    InitializeEvent(31, 3100, 131); 
+    InitializeEvent(32, 3100, 132); 
+    InitializeEvent(33, 3100, 133); 
+    InitializeEvent(34, 3100, 134); 
+    InitializeEvent(35, 3100, 135); 
+    InitializeEvent(36, 3100, 136); 
+    InitializeEvent(37, 3100, 137); 
+    InitializeEvent(38, 3100, 138); 
+    InitializeEvent(39, 3100, 139); 
+    InitializeEvent(40, 3100, 140); 
+    InitializeEvent(41, 3100, 141); 
+    InitializeEvent(42, 3100, 142); 
+    InitializeEvent(43, 3100, 143); 
+    InitializeEvent(44, 3100, 144); 
+    InitializeEvent(45, 3100, 145); 
+    InitializeEvent(46, 3100, 146); 
+    InitializeEvent(47, 3100, 147); 
+    InitializeEvent(48, 3100, 148); 
+    InitializeEvent(49, 3100, 149); 
+    InitializeEvent(50, 3100, 150); 
+    InitializeEvent(51, 3100, 151); 
+    InitializeEvent(52, 3100, 152); 
+    InitializeEvent(53, 3100, 153); 
+    InitializeEvent(54, 3100, 154); 
+    InitializeEvent(55, 3100, 155); 
+    InitializeEvent(56, 3100, 156); 
+    InitializeEvent(57, 3100, 157); 
+    InitializeEvent(58, 3100, 158); 
+    InitializeEvent(59, 3100, 159); 
+    
+    // Wave 4
+    InitializeEvent(1, 3101, 160); 
+    InitializeEvent(2, 3101, 161);
+    InitializeEvent(3, 3101, 162);
+    
+    // Wave 5
 });
 
+//=================================================
+// Loot System - Basic Enemies
+//=================================================
+Event(3100, Default, function(X0_4) {
+    IfCharacterDeadalive(MAIN, X0_4, DeathState.Dead, Equal, 1);
+    
+    //===============
+    // Determine Loot Award
+    //===============
+    BatchSetEventFlags(4800, 4899, OFF); // 1% chance
+    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 4800);
+    
+    //===============
+    // Award Item
+    //===============
+    BatchSetEventFlags(4800, 4899, OFF);
+    
+    // Can drop Heads, Generators, Weapons
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4800);
+    AwardItemLot(5000);
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4801);
+    AwardItemLot(5010);
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4802);
+    AwardItemLot(5020);
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4803);
+    AwardItemLot(5030);
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4804);
+    AwardItemLot(5040);
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4805);
+    AwardItemLot(5050);
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4806);
+    AwardItemLot(5060);
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4807);
+    AwardItemLot(5070);
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4808);
+    AwardItemLot(5080);
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4809);
+    AwardItemLot(5090);
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4810);
+    AwardItemLot(5100);
+});
 
 //=================================================
-// Setup
+// Loot System - Tough Enemies
+//=================================================
+Event(3101, Default, function(X0_4) {
+    IfCharacterDeadalive(MAIN, X0_4, DeathState.Dead, Equal, 1);
+    
+    //===============
+    // Determine Loot Award
+    //===============
+    BatchSetEventFlags(4800, 4809, OFF); // 10% chance
+    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 4800);
+    
+    //===============
+    // Award Item
+    //===============
+    BatchSetEventFlags(4800, 4899, OFF);
+    
+    // Can drop all.
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4800);
+    AwardItemLot(5000);
+    
+});
+
+//=================================================
+// Loot System - Bosses
+//=================================================
+Event(3102, Default, function(X0_4) {
+    IfCharacterDeadalive(MAIN, X0_4, DeathState.Dead, Equal, 1);
+    
+    //===============
+    // Award Item
+    //===============
+    BatchSetEventFlags(4800, 4899, OFF);
+    
+    // Can drop all.
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4800);
+    AwardItemLot(5000);
+});
+
+//=================================================
+// Trial System
 //=================================================
 Event(3000, Default, function() {
     ChangeCharacterEnableState(5300, Disabled);
@@ -63,8 +210,6 @@ Event(3000, Default, function() {
     
     WaitFixedTimeSeconds(5);
     
-    // AwardItemLot(5000);
-    
     //WarpAssetToCharacter(900, 990, 1);
     
     //=================================================
@@ -88,10 +233,10 @@ Event(3000, Default, function() {
     // Wave 3 - Mass MT Wave
     InitializeEvent(0, 3003, 0);
     
-    // Wave 4 - Heavy Cavalry * 2 + Light Cavalry * 2
+    // Wave 4 - Heavy Cavalry * 1 + Light Cavalry * 2
     InitializeEvent(0, 3004, 0);
     
-    // Wave 5
+    // Wave 5 - Boss
     
     // Wave 6
     
@@ -111,7 +256,7 @@ Event(3000, Default, function() {
     
     // Wave 14
     
-    // Wave 15 - AC
+    // Wave 15 - Boss
     
     // Wave 16
     
