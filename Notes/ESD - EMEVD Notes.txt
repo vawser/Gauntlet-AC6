@@ -1,0 +1,5 @@
+# EMEVD / ESD events
+InitializeEsdTriggeredEvent is used to setup a common_func/mXX_XX_XX_XX event that is ONLY initalized upon a ScheduleCommonEmevdEvent or ScheduleEmevdEvent command from within a ESD script.
+
+# Template Remnants
+A lot of the initialization events appear to be pointless, this is likely a remnant of a templating system where all of the stubs are added.

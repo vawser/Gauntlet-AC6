@@ -1,4 +1,12 @@
+#--------------------------------------------
+# Plan
+#--------------------------------------------
+Restore proper death and mission handling (e.g. mission ends with 'victory' on death so the player can be rewarded)
+Finish wave design for Grid 135 trial
+Add part rewards from training missions to gauntlet rewards (as training missions have been removed)
 
+
+# Reference
 30500350 PCA Subject Guard MT (Flamethrower) [Survival]
 11600050 LIGER TAIL / G1 Michigan [Survival]
 30000050 BAWS Guard MT (Walker) (Kinetic Gun) [Survival]

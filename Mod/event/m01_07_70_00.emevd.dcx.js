@@ -8,6 +8,12 @@
 // ==/EMEVD==
 
 Event(0, Default, function() {
+    // Common ESD Events
+    InitializeEsdTriggeredEvent(0, 5402, 0); // ?
+    InitializeEsdTriggeredEvent(0, 5403, 0); // Cutscene flag reset
+    InitializeEsdTriggeredEvent(0, 5404, 0); // Spawn immortality?
+    InitializeEsdTriggeredEvent(0, 5420, 0); // COMMENCE MISSION
+    
     // Trial System
     InitializeEvent(0, 3000, 0);
     
