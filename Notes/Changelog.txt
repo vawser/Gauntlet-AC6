@@ -1,10 +1,14 @@
 #--------------------------------------------
 # Plan
 #--------------------------------------------
-Add option to Pause menu to quit early and earn rewards still
-Juggernaut is missing some textures (likely map textures it uses)
-Finish wave design for Grid 135 trial
-Add part rewards from training missions to gauntlet rewards (as training missions have been removed)
+9201
+9202
+9203
+9204
+9205
+9206
+
+m50_60
 
 
 # Reference
