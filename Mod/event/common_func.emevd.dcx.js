@@ -117,7 +117,7 @@ Event(5300, Default, function(X0_4, X4_4) {
     PlaySE(0, SoundType.BGM, 999992020);
     SetRelativeEventFlag(0, 5920, 1);
     IfElapsedFrames(MAIN, 1);
-    Unknown200208(X0_4, 34, 0, 0, 0, X4_4);
+    Unknown200208(X0_4, 34, 0, 0, 0, X4_4); // Sound Cutscene Param ID?
     IfElapsedFrames(MAIN, 1);
     UnknownCondition20(0);
     SetSpEffect(0, 200000100);

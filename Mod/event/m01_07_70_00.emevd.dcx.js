@@ -9,7 +9,10 @@
 
 Event(0, Default, function() {
     // DEBUG SPEFFECT
-    //SetSpEffect(20000, 20000);
+    SetSpEffect(20000, 99993100);
+    
+    // Action Button Test
+    InitializeEvent(0, 3200, 0);
     
     //===============
     // Trial System
@@ -90,6 +93,72 @@ Event(0, Default, function() {
     
     // Wave 5
     InitializeEvent(0, 3102, 170);
+    
+    // Wave 6
+    InitializeEvent(4, 3101, 180); 
+    InitializeEvent(5, 3101, 181); 
+    InitializeEvent(6, 3101, 182); 
+    InitializeEvent(7, 3101, 183); 
+    InitializeEvent(8, 3101, 184); 
+    InitializeEvent(9, 3101, 185); 
+    InitializeEvent(10, 3101, 186); 
+    InitializeEvent(11, 3101, 187); 
+    InitializeEvent(12, 3101, 188); 
+    InitializeEvent(12, 3101, 189); 
+    
+    // Wave 7
+    InitializeEvent(60, 3100, 190); 
+    InitializeEvent(61, 3100, 191); 
+    InitializeEvent(62, 3100, 192); 
+    InitializeEvent(63, 3100, 193); 
+    InitializeEvent(64, 3100, 194); 
+    InitializeEvent(65, 3100, 195); 
+    InitializeEvent(66, 3100, 196); 
+    InitializeEvent(67, 3100, 197); 
+    InitializeEvent(68, 3100, 198); 
+    InitializeEvent(69, 3100, 199); 
+    InitializeEvent(70, 3100, 200); 
+    InitializeEvent(71, 3100, 201); 
+    InitializeEvent(72, 3100, 202); 
+    InitializeEvent(73, 3100, 203); 
+    InitializeEvent(74, 3100, 204); 
+    InitializeEvent(75, 3100, 205); 
+    InitializeEvent(76, 3100, 206); 
+    InitializeEvent(77, 3100, 207); 
+    InitializeEvent(78, 3100, 208); 
+    InitializeEvent(13, 3101, 209); 
+    
+    // Wave 8
+    InitializeEvent(14, 3101, 210); 
+    InitializeEvent(15, 3101, 211); 
+    InitializeEvent(16, 3101, 212); 
+    InitializeEvent(17, 3101, 213); 
+    InitializeEvent(18, 3101, 214);
+    InitializeEvent(19, 3101, 215);  
+    
+    // Wave 9
+    
+    // Wave 10
+    
+    // Wave 11
+    
+    // Wave 12
+    
+    // Wave 13
+    
+    // Wave 14
+    
+    // Wave 15
+    
+    // Wave 16
+    
+    // Wave 17
+    
+    // Wave 18
+    
+    // Wave 19
+    
+    // Wave 20
 });
 
 
@@ -131,7 +200,7 @@ Event(3000, Default, function() {
     SetEventFlag(TargetEventFlagType.EventFlag, 4529, OFF);
     SetEventFlag(TargetEventFlagType.EventFlag, 4530, OFF);
     
-    SetEventFlag(TargetEventFlagType.EventFlag, 4590, OFF); // Resupply flag
+    SetEventFlag(TargetEventFlagType.EventFlag, 4591, OFF); // TERMINATE PROGRAM action flag
     
     WaitFixedTimeSeconds(5);
     
@@ -150,51 +219,54 @@ Event(3000, Default, function() {
     // SetEventFlag(TargetEventFlagType.EventFlag, 4503, ON);
     
     // Wave 1 - Basic MT Wave
-    InitializeEvent(0, 3001, 0);
+    //InitializeEvent(0, 3001, 0);
     
     // Wave 2 - Light Cavalry + Basic MT Wave
-    InitializeEvent(0, 3002, 0);
+    //InitializeEvent(0, 3002, 0);
     
     // Wave 3 - Mass MT Wave
-    InitializeEvent(0, 3003, 0);
+    //InitializeEvent(0, 3003, 0);
     
-    // Wave 4 - Light Cavalry * 3
-    InitializeEvent(0, 3004, 0);
+    // Wave 4 - Heavy Cavalry * 1 + Light Cavalry * 2
+    //InitializeEvent(0, 3004, 0);
     
     // Wave 5 - Boss (Juggernaut)
-    InitializeEvent(0, 3005, 0);
+    //InitializeEvent(0, 3005, 0);
     
-    // Wave 6
+    // Wave 6 - Ghost MTs
+    //InitializeEvent(0, 3006, 0);
     
-    // Wave 7
+    // Wave 7 - Waveship + Drones
+    //InitializeEvent(0, 3007, 0);
     
     // Wave 8
+    InitializeEvent(0, 3008, 0);
     
     // Wave 9
+    InitializeEvent(0, 3009, 0);
     
     // Wave 10 - Boss
+    InitializeEvent(0, 3010, 0);
     
     // Wave 11
+    InitializeEvent(0, 3011, 0);
     
     // Wave 12
+    InitializeEvent(0, 3012, 0);
     
     // Wave 13
+    InitializeEvent(0, 3013, 0);
     
     // Wave 14
+    InitializeEvent(0, 3014, 0);
     
     // Wave 15 - Boss
+    InitializeEvent(0, 3015, 0);
     
-    // Wave 16
-    
-    // Wave 17
-    
-    // Wave 18
-    
-    // Wave 19
-    
-    // Wave 20 - Boss
-    
-    // End Trial
+    // End Trial once final boss is dead
+    SkipIfEventFlag(2, OFF, TargetEventFlagType.EventFlag, 4514);
+    WaitFixedTimeSeconds(10);
+    SetEventFlag(TargetEventFlagType.EventFlag, 4591, ON);
 });
 
 //=================================================
@@ -230,8 +302,6 @@ Event(3001, Default, function() {
     DisplayTextEffectMessage(WaveEndText);
     WaitFixedTimeSeconds(2);
     EndTextEffectMessage(3);
-    
-    ChangeAssetEnableState(900, Enabled);
     
     // Rest Time
     WaitFixedTimeSeconds(WaveIntermission);
@@ -426,7 +496,7 @@ Event(3005, Default, function() {
     ChangeCharacterEnableState(170, Enabled);
     
     // Wave Duration
-    IfCharacterRatioDeadalive(MAIN, 170, DeathState.Dead, Equal, 1);
+    IfCharacterRatioDeadalive(MAIN, 5305, DeathState.Dead, Equal, 1);
     
     // Wave End:
     DisplayTextEffectMessage(WaveEndText);
@@ -440,15 +510,168 @@ Event(3005, Default, function() {
 });
 
 //=================================================
+// Wave 6
+//=================================================
+Event(3006, Default, function() {
+    const WaveStartText = 105;
+    const WaveIntermission = 15;
+    const WaveEndText = 90;
+    
+    IfEventFlag(MAIN, ON, TargetEventFlagType.EventFlag, 4505);
+    
+    // Wave Start:
+    DisplayTextEffectMessage(WaveStartText);
+    WaitFixedTimeSeconds(2);
+    EndTextEffectMessage(3);
+    
+    // Enemies to Spawn:
+    ChangeCharacterEnableState(189, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(180, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(181, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(182, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(183, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(184, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(185, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(186, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(187, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(188, Enabled);
+    
+    // Wave Duration
+    IfCharacterRatioDeadalive(OR_01, 5306, DeathState.Dead, Equal, 1);
+    IfElapsedSeconds(OR_01, 120);
+    IfConditionGroup(MAIN, PASS, OR_01);
+    
+    // Wave End:
+    DisplayTextEffectMessage(WaveEndText);
+    WaitFixedTimeSeconds(2);
+    EndTextEffectMessage(3);
+    
+    // Rest Time
+    WaitFixedTimeSeconds(WaveIntermission);
+    
+    SetEventFlag(TargetEventFlagType.EventFlag, 4506, ON);
+});
+
+//=================================================
+// Wave 7
+//=================================================
+Event(3007, Default, function() {
+    const WaveStartText = 106;
+    const WaveIntermission = 15;
+    const WaveEndText = 90;
+    
+    IfEventFlag(MAIN, ON, TargetEventFlagType.EventFlag, 4506);
+    
+    // Wave Start:
+    DisplayTextEffectMessage(WaveStartText);
+    WaitFixedTimeSeconds(2);
+    EndTextEffectMessage(3);
+    
+    // Enemies to Spawn:
+    ChangeCharacterEnableState(190, Enabled);
+    ChangeCharacterEnableState(191, Enabled);
+    ChangeCharacterEnableState(192, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(208, Enabled);
+    ChangeCharacterEnableState(209, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(193, Enabled);
+    ChangeCharacterEnableState(194, Enabled);
+    ChangeCharacterEnableState(195, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(202, Enabled);
+    ChangeCharacterEnableState(203, Enabled);
+    ChangeCharacterEnableState(204, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(196, Enabled);
+    ChangeCharacterEnableState(197, Enabled);
+    ChangeCharacterEnableState(198, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(199, Enabled);
+    ChangeCharacterEnableState(200, Enabled);
+    ChangeCharacterEnableState(201, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(205, Enabled);
+    ChangeCharacterEnableState(206, Enabled);
+    ChangeCharacterEnableState(207, Enabled);
+    
+    // Wave Duration
+    IfCharacterRatioDeadalive(OR_01, 5307, DeathState.Dead, Equal, 1);
+    IfElapsedSeconds(OR_01, 120);
+    IfConditionGroup(MAIN, PASS, OR_01);
+    
+    // Wave End:
+    DisplayTextEffectMessage(WaveEndText);
+    WaitFixedTimeSeconds(2);
+    EndTextEffectMessage(3);
+    
+    // Rest Time
+    WaitFixedTimeSeconds(WaveIntermission);
+    
+    SetEventFlag(TargetEventFlagType.EventFlag, 4507, ON);
+});
+
+//=================================================
+// Wave 8
+//=================================================
+Event(3008, Default, function() {
+    const WaveStartText = 107;
+    const WaveIntermission = 15;
+    const WaveEndText = 90;
+    
+    IfEventFlag(MAIN, ON, TargetEventFlagType.EventFlag, 4507);
+    
+    // Wave Start:
+    DisplayTextEffectMessage(WaveStartText);
+    WaitFixedTimeSeconds(2);
+    EndTextEffectMessage(3);
+    
+    // Enemies to Spawn:
+    ChangeCharacterEnableState(210, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(211, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(212, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(213, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(214, Enabled);
+    WaitRandomTimeSeconds(1, 3);
+    ChangeCharacterEnableState(215, Enabled);
+    
+    // Wave Duration
+    IfCharacterRatioDeadalive(OR_01, 5308, DeathState.Dead, Equal, 1);
+    IfElapsedSeconds(OR_01, 120);
+    IfConditionGroup(MAIN, PASS, OR_01);
+    
+    // Wave End:
+    DisplayTextEffectMessage(WaveEndText);
+    WaitFixedTimeSeconds(2);
+    EndTextEffectMessage(3);
+    
+    // Rest Time
+    WaitFixedTimeSeconds(WaveIntermission);
+    
+    SetEventFlag(TargetEventFlagType.EventFlag, 4508, ON);
+});
+
+//=================================================
 // Loot System - Basic Enemies
 //=================================================
 Event(3100, Default, function(X0_4) {
     IfCharacterDeadalive(MAIN, X0_4, DeathState.Dead, Equal, 1);
     
-    //===============
-    // Determine Loot Award
-    //===============
     BatchSetEventFlags(4800, 4899, OFF); // 1% chance
+    RandomlySetEventFlagInRange(4800, 4899, ON); // 1% chance
     EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 4800);
     
     InitializeEvent(0, 3110, 0);
@@ -460,10 +683,8 @@ Event(3100, Default, function(X0_4) {
 Event(3101, Default, function(X0_4) {
     IfCharacterDeadalive(MAIN, X0_4, DeathState.Dead, Equal, 1);
     
-    //===============
-    // Determine Loot Award
-    //===============
-    BatchSetEventFlags(4800, 4809, OFF); // 10% chance
+    BatchSetEventFlags(4800, 4809, OFF); 
+    RandomlySetEventFlagInRange(4800, 4809, ON); // 10% chance
     EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 4800);
     
     InitializeEvent(0, 3110, 0);
@@ -1475,4 +1696,12 @@ Event(3110, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4916);
     AwardItemLot(19030);
     
+});
+
+//=================================================
+// Action Button Test
+//=================================================
+Event(3200, Default, function() {
+    IfActionButtonInArea(MAIN, 10000080, 2110000500);
+    DisplayTextEffectMessage(10);
 });
