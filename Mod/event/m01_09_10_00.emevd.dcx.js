@@ -136,7 +136,7 @@ Event(3000, Default, function() {
     InitializeEvent(0, 3004, 0);
     InitializeEvent(4, 3200, 5304);
     
-    // Wave 5 - Boss:
+    // Wave 5 - Boss: Bonewheel
     InitializeEvent(0, 3005, 0);
     InitializeEvent(5, 3200, 5305);
     

@@ -118,19 +118,19 @@ Event(3000, Default, function() {
     //=================================================
     // Waves
     //=================================================
-    // Wave 1 - Tetrapods + Guard Mechs
+    // Wave 1 - 
     InitializeEvent(0, 3001, 0);
     InitializeEvent(1, 3200, 5301);
     
-    // Wave 2 - Light Cavalry
+    // Wave 2 - 
     InitializeEvent(0, 3002, 0);
     InitializeEvent(2, 3200, 5302);
     
-    // Wave 3 - Spider MT + TOYBOX MT
+    // Wave 3 - 
     InitializeEvent(0, 3003, 0);
     InitializeEvent(3, 3200, 5303);
     
-    // Wave 4 - Ekdromoi
+    // Wave 4 - 
     InitializeEvent(0, 3004, 0);
     InitializeEvent(4, 3200, 5304);
     
