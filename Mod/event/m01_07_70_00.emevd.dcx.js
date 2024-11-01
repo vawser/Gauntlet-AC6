@@ -199,6 +199,18 @@ Event(0, Default, function() {
     InitializeEvent(0, 3103, 290);
 });
 
+//=================================================
+// Marker System - <wave group id>
+//=================================================
+Event(3200, Default, function(X0_4) {
+    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 4592);
+    ClearSpEffect(X0_4, 9991003);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4592);
+    SetSpEffect(X0_4, 9991003);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
 
 //=================================================
 // Trial System
@@ -224,6 +236,7 @@ Event(3000, Default, function() {
     SetEventFlag(TargetEventFlagType.EventFlag, 4515, OFF);
     
     SetEventFlag(TargetEventFlagType.EventFlag, 4591, OFF); // End Gauntlet flag
+    SetEventFlag(TargetEventFlagType.EventFlag, 4592, ON); // Show Target Markers flag
     
     WaitFixedTimeSeconds(5);
     
@@ -232,48 +245,63 @@ Event(3000, Default, function() {
     //=================================================
     // Wave 1 - Basic MT Wave
     InitializeEvent(0, 3001, 0);
+    InitializeEvent(1, 3200, 5301);
     
     // Wave 2 - Light Cavalry + Basic MT Wave
     InitializeEvent(0, 3002, 0);
+    InitializeEvent(2, 3200, 5302);
     
     // Wave 3 - Mass MT Wave
     InitializeEvent(0, 3003, 0);
+    InitializeEvent(3, 3200, 5303);
     
     // Wave 4 - Heavy Cavalry * 1 + Light Cavalry * 2
     InitializeEvent(0, 3004, 0);
+    InitializeEvent(4, 3200, 5304);
     
     // Wave 5 - Boss: Juggernaut
     InitializeEvent(0, 3005, 0);
+    InitializeEvent(5, 3200, 5305);
     
     // Wave 6 - Ghost MTs
     InitializeEvent(0, 3006, 0);
+    InitializeEvent(6, 3200, 5306);
     
-    // Wave 7 - Waveship + Drones
+    // Wave 7 - Warship + Drones
     InitializeEvent(0, 3007, 0);
+    InitializeEvent(7, 3200, 5307);
     
     // Wave 8 - Institute MTs
     InitializeEvent(0, 3008, 0);
+    InitializeEvent(8, 3200, 5308);
     
     // Wave 9 - Tetrapods * 2 + Light Cavalry * 2 + Quadcopters
     InitializeEvent(0, 3009, 0);
+    InitializeEvent(9, 3200, 5309);
     
     // Wave 10 - Boss: Balteus
     InitializeEvent(0, 3010, 0);
+    InitializeEvent(10, 3200, 5310);
     
     // Wave 11 - Helianthus Machines * 3
     InitializeEvent(0, 3011, 0);
+    InitializeEvent(11, 3200, 5311);
     
     // Wave 12 - TOYBOX * 2 + Subject Guard MTs
     InitializeEvent(0, 3012, 0);
+    InitializeEvent(12, 3200, 5312);
     
     // Wave 13 - Cataphract * 1 + Artillery
     InitializeEvent(0, 3013, 0);
+    InitializeEvent(13, 3200, 5313);
     
     // Wave 14
     InitializeEvent(0, 3014, 0);
+    InitializeEvent(14, 3200, 5314);
     
     // Wave 15 - Boss
     InitializeEvent(0, 3015, 0);
+    InitializeEvent(15, 3200, 5315);
     
     WaitForEventFlag(ON, TargetEventFlagType.EventFlag, 4515);
     WaitFixedTimeSeconds(5);
@@ -978,6 +1006,7 @@ Event(3015, Default, function() {
     
     SetEventFlag(TargetEventFlagType.EventFlag, 4515, ON);
 });
+
 
 //=================================================
 // Loot System - Basic Enemies
@@ -2025,4 +2054,3 @@ Event(3110, Default, function() {
     AwardItemLot(19030);
     
 });
-

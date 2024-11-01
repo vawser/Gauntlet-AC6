@@ -136,3 +136,99 @@
 [2024-11-01 02:13:50.073] [modengine] [info] Enabled extension mod_loader
 [2024-11-01 02:13:50.114] [modengine] [info] Applied 3 hooks
 [2024-11-01 02:13:50.115] [modengine] [info] Starting worker thread
+[2024-11-01 02:29:40.871] [modengine] [info] Destroying
+[2024-11-01 02:29:40.871] [modengine] [info] Destroying
+[2024-11-01 02:29:40.871] [modengine] [info] Destroying
+[2024-11-01 02:29:40.871] [modengine] [info] Destroying
+[2024-11-01 02:29:40.871] [modengine] [info] Destroying
+[2024-11-01 02:29:40.871] [modengine] [info] Destroying
+[2024-11-01 02:29:40.871] [modengine] [info] Destroying
+[2024-11-01 02:29:40.873] [modengine] [info] Destroying
+[2024-11-01 02:29:40.873] [modengine] [info] Destroying
+[2024-11-01 02:29:40.873] [modengine] [info] Destroying
+[2024-11-01 12:48:30.139] [modengine] [info] Attempting to load global config at C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\modengine2\config.toml
+[2024-11-01 12:48:30.140] [modengine] [info] Attempting to load mod settings config at C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\config_armoredcore6.toml
+[2024-11-01 12:48:30.144] [modengine] [info] Local config loaded
+[2024-11-01 12:48:30.144] [modengine] [info] ModEngine version 2.1.0-0924ab36f1311bf84e7e626740b4bf2c0d54909a initializing for Armored Core 6
+[2024-11-01 12:48:30.144] [modengine] [info] Local settings loaded: true, Global settings loaded: false
+[2024-11-01 12:48:30.144] [modengine] [info] Main thread ID: 6740
+[2024-11-01 12:48:30.145] [modengine] [info] Enabling extension base
+[2024-11-01 12:48:30.145] [modengine] [info] Enabled extension base
+[2024-11-01 12:48:30.145] [modengine] [info] Enabling extension mod_loader
+[2024-11-01 12:48:30.145] [modengine] [info] Installing mod location mod
+[2024-11-01 12:48:30.145] [modengine] [info] Resolved mod path to C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\mod
+[2024-11-01 12:48:30.145] [modengine] [info] Enabled extension mod_loader
+[2024-11-01 12:48:30.186] [modengine] [info] Applied 3 hooks
+[2024-11-01 12:48:30.187] [modengine] [info] Starting worker thread
+[2024-11-01 13:08:31.806] [modengine] [info] Destroying
+[2024-11-01 13:08:31.806] [modengine] [info] Destroying
+[2024-11-01 13:08:31.806] [modengine] [info] Destroying
+[2024-11-01 13:08:31.806] [modengine] [info] Destroying
+[2024-11-01 13:08:31.806] [modengine] [info] Destroying
+[2024-11-01 13:08:31.806] [modengine] [info] Destroying
+[2024-11-01 13:08:31.806] [modengine] [info] Destroying
+[2024-11-01 13:08:31.806] [modengine] [info] Destroying
+[2024-11-01 13:08:31.806] [modengine] [info] Destroying
+[2024-11-01 13:08:31.807] [modengine] [info] Destroying
+[2024-11-01 13:14:37.650] [modengine] [info] Attempting to load global config at C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\modengine2\config.toml
+[2024-11-01 13:14:37.650] [modengine] [info] Attempting to load mod settings config at C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\config_armoredcore6.toml
+[2024-11-01 13:14:37.650] [modengine] [info] Local config loaded
+[2024-11-01 13:14:37.650] [modengine] [info] ModEngine version 2.1.0-0924ab36f1311bf84e7e626740b4bf2c0d54909a initializing for Armored Core 6
+[2024-11-01 13:14:37.650] [modengine] [info] Local settings loaded: true, Global settings loaded: false
+[2024-11-01 13:14:37.650] [modengine] [info] Main thread ID: 24224
+[2024-11-01 13:14:37.652] [modengine] [info] Enabling extension base
+[2024-11-01 13:14:37.652] [modengine] [info] Enabled extension base
+[2024-11-01 13:14:37.652] [modengine] [info] Enabling extension mod_loader
+[2024-11-01 13:14:37.652] [modengine] [info] Installing mod location mod
+[2024-11-01 13:14:37.652] [modengine] [info] Resolved mod path to C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\mod
+[2024-11-01 13:14:37.652] [modengine] [info] Enabled extension mod_loader
+[2024-11-01 13:14:37.692] [modengine] [info] Applied 3 hooks
+[2024-11-01 13:14:37.693] [modengine] [info] Starting worker thread
+[2024-11-01 13:20:28.470] [modengine] [info] Destroying
+[2024-11-01 13:20:28.470] [modengine] [info] Destroying
+[2024-11-01 13:20:28.470] [modengine] [info] Destroying
+[2024-11-01 13:20:28.470] [modengine] [info] Destroying
+[2024-11-01 13:20:28.470] [modengine] [info] Destroying
+[2024-11-01 13:20:28.470] [modengine] [info] Destroying
+[2024-11-01 13:20:28.470] [modengine] [info] Destroying
+[2024-11-01 13:20:28.471] [modengine] [info] Destroying
+[2024-11-01 13:20:28.471] [modengine] [info] Destroying
+[2024-11-01 13:20:28.471] [modengine] [info] Destroying
+[2024-11-01 13:20:32.283] [modengine] [info] Attempting to load global config at C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\modengine2\config.toml
+[2024-11-01 13:20:32.283] [modengine] [info] Attempting to load mod settings config at C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\config_armoredcore6.toml
+[2024-11-01 13:20:32.283] [modengine] [info] Local config loaded
+[2024-11-01 13:20:32.283] [modengine] [info] ModEngine version 2.1.0-0924ab36f1311bf84e7e626740b4bf2c0d54909a initializing for Armored Core 6
+[2024-11-01 13:20:32.283] [modengine] [info] Local settings loaded: true, Global settings loaded: false
+[2024-11-01 13:20:32.283] [modengine] [info] Main thread ID: 37116
+[2024-11-01 13:20:32.284] [modengine] [info] Enabling extension base
+[2024-11-01 13:20:32.284] [modengine] [info] Enabled extension base
+[2024-11-01 13:20:32.284] [modengine] [info] Enabling extension mod_loader
+[2024-11-01 13:20:32.284] [modengine] [info] Installing mod location mod
+[2024-11-01 13:20:32.284] [modengine] [info] Resolved mod path to C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\mod
+[2024-11-01 13:20:32.284] [modengine] [info] Enabled extension mod_loader
+[2024-11-01 13:20:32.325] [modengine] [info] Applied 3 hooks
+[2024-11-01 13:20:32.327] [modengine] [info] Starting worker thread
+[2024-11-01 13:39:26.432] [modengine] [info] Destroying
+[2024-11-01 13:39:26.432] [modengine] [info] Destroying
+[2024-11-01 13:39:26.432] [modengine] [info] Destroying
+[2024-11-01 13:39:26.432] [modengine] [info] Destroying
+[2024-11-01 13:39:26.432] [modengine] [info] Destroying
+[2024-11-01 13:39:26.432] [modengine] [info] Destroying
+[2024-11-01 13:39:26.432] [modengine] [info] Destroying
+[2024-11-01 13:39:26.433] [modengine] [info] Destroying
+[2024-11-01 13:39:26.433] [modengine] [info] Destroying
+[2024-11-01 13:39:26.433] [modengine] [info] Destroying
+[2024-11-01 14:05:58.349] [modengine] [info] Attempting to load global config at C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\modengine2\config.toml
+[2024-11-01 14:05:58.349] [modengine] [info] Attempting to load mod settings config at C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\config_armoredcore6.toml
+[2024-11-01 14:05:58.349] [modengine] [info] Local config loaded
+[2024-11-01 14:05:58.349] [modengine] [info] ModEngine version 2.1.0-0924ab36f1311bf84e7e626740b4bf2c0d54909a initializing for Armored Core 6
+[2024-11-01 14:05:58.349] [modengine] [info] Local settings loaded: true, Global settings loaded: false
+[2024-11-01 14:05:58.349] [modengine] [info] Main thread ID: 2424
+[2024-11-01 14:05:58.351] [modengine] [info] Enabling extension base
+[2024-11-01 14:05:58.351] [modengine] [info] Enabled extension base
+[2024-11-01 14:05:58.351] [modengine] [info] Enabling extension mod_loader
+[2024-11-01 14:05:58.351] [modengine] [info] Installing mod location mod
+[2024-11-01 14:05:58.351] [modengine] [info] Resolved mod path to C:\Users\benja\Modding\Armored Core VI\Projects\Gauntlet\mod
+[2024-11-01 14:05:58.351] [modengine] [info] Enabled extension mod_loader
+[2024-11-01 14:05:58.391] [modengine] [info] Applied 3 hooks
+[2024-11-01 14:05:58.393] [modengine] [info] Starting worker thread
