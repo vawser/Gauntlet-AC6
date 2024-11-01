@@ -16,7 +16,6 @@ Event(0, Default, function() {
     //===============
     // Loot System
     //===============
-    
     // Wave 1
     InitializeEvent(0, 3100, 100); 
     InitializeEvent(1, 3100, 101); 

@@ -16,7 +16,42 @@
     },
     {
       "id": "m01_12_10_00",
-      "name": "Rubicon\u0027s Best",
+      "name": "Gauntlet: Institute City",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "m01_12_20_00",
+      "name": "Gauntlet: LOC Station 31",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "m01_12_00_00",
+      "name": "Gauntlet: Watchpoint Alpha",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "m01_09_10_00",
+      "name": "Gauntlet: Bona Dea Dunes",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "m01_11_30_00",
+      "name": "Gauntlet: The Wall",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "m01_11_40_00",
+      "name": "Gauntlet: Xylem, the Floating City",
       "tags": [
         ""
       ]
