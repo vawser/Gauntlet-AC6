@@ -1,0 +1,151 @@
+{
+  "list": [
+    {
+      "id": "dummy",
+      "name": "Dummy",
+      "tags": [
+        "dummy"
+      ]
+    },
+    {
+      "id": "4500",
+      "name": "GAUNTLET: Wave 1 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4501",
+      "name": "GAUNTLET: Wave 2 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4502",
+      "name": "GAUNTLET: Wave 3 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4503",
+      "name": "GAUNTLET: Wave 4 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4504",
+      "name": "GAUNTLET: Wave 5 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4505",
+      "name": "GAUNTLET: Wave 6 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4506",
+      "name": "GAUNTLET: Wave 7 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4507",
+      "name": "GAUNTLET: Wave 8 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4509",
+      "name": "GAUNTLET: Wave 10 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4510",
+      "name": "GAUNTLET: Wave 11 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4511",
+      "name": "GAUNTLET: Wave 12 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4512",
+      "name": "GAUNTLET: Wave 13 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4513",
+      "name": "GAUNTLET: Wave 14 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4514",
+      "name": "GAUNTLET: Wave 15 Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4515",
+      "name": "GAUNTLET: Trial Over Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4591",
+      "name": "GAUNTLET: End Trial Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4592",
+      "name": "GAUNTLET: Show Target Markers Flag",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4580",
+      "name": "GAUNTLET: Difficulty Flag - Standard",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4581",
+      "name": "GAUNTLET: Difficulty Flag - Easy",
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "id": "4582",
+      "name": "GAUNTLET: Difficulty Flag - Hard",
+      "tags": [
+        ""
+      ]
+    }
+  ]
+}

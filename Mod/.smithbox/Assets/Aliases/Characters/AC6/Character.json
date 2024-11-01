@@ -1,0 +1,32 @@
+{
+  "list": [
+    {
+      "id": "dummy",
+      "name": "Dummy",
+      "tags": [
+        "dummy"
+      ]
+    },
+    {
+      "id": "c3600",
+      "name": "Spider MT",
+      "tags": [
+        "asset"
+      ]
+    },
+    {
+      "id": "c3400",
+      "name": "Tetrapod MT",
+      "tags": [
+        "asset"
+      ]
+    },
+    {
+      "id": "c4150",
+      "name": "TOYBOX MT",
+      "tags": [
+        "asset"
+      ]
+    }
+  ]
+}
