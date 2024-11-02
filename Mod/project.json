@@ -7,7 +7,10 @@
     "SpEffectParam",
     "MissionParam",
     "NpcThinkParam",
-    "ItemLotParam"
+    "ItemLotParam",
+    "EquipParamProtector",
+    "EquipParamWeapon",
+    "EquipmentLineupParam"
   ],
   "PinnedRows": {},
   "PinnedFields": {

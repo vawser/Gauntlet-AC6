@@ -8,6 +8,8 @@
 // ==/EMEVD==
 
 Event(0, Default, function() {
+    //AwardItemLot(20000);
+    
     //===============
     // Trial System
     //===============
@@ -1045,7 +1047,8 @@ Event(3103, Default, function(X0_4) {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4580);
     InitializeCommonEvent(6010, 0);
     
-    // Special Item Here
+    // LEGS - OV-139 BEAR
+    AwardItemLot(20010);
 });
 
 //=================================================

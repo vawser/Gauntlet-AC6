@@ -8,7 +8,7 @@
 // ==/EMEVD==
 
 Event(0, Default, function() {
-    //SetSpEffect(20000, 20000); // Debug
+    //AwardItemLot(20010);
     
     // Map Boundary
     ActivateHit(50604205, Enabled);
@@ -108,8 +108,8 @@ Event(3000, Default, function() {
     // Waves
     //=================================================
     // Wave 1 - Tetrapods + Guard Mechs
-    InitializeEvent(0, 3001, 0);
-    InitializeEvent(1, 3200, 5301);
+    //InitializeEvent(0, 3001, 0);
+    //InitializeEvent(1, 3200, 5301);
     
     // Wave 2 - Light Cavalry
     InitializeEvent(0, 3002, 0);
@@ -433,7 +433,8 @@ Event(3103, Default, function(X0_4) {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4580);
     InitializeCommonEvent(6010, 0);
     
-    // Special Item Here
+    // HEAD - OV-964 BEAR
+    AwardItemLot(20000);
 });
 
 //=================================================
