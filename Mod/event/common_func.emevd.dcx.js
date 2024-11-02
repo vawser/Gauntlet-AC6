@@ -50,7 +50,7 @@ Event(5250, Default, function(X0_4, X4_4, X8_4, X12_4, X16_4, X20_4, X24_4, X28_
 
 Event(5260, Default, function(X0_4) {
     PlayCutsceneToPlayerAndWarpWithStablePositionUpdate(X0_4, CutscenePlayMode.SkippableWithFadeOutSkip);
-    UnknownCondition20(0);
+    WaitForCutsceneToEnd(0);
     SetSpEffect(0, 0);
 });
 
@@ -119,7 +119,7 @@ Event(5300, Default, function(X0_4, X4_4) {
     IfElapsedFrames(MAIN, 1);
     Unknown200208(X0_4, 34, 0, 0, 0, X4_4); // Sound Cutscene Param ID?
     IfElapsedFrames(MAIN, 1);
-    UnknownCondition20(0);
+    WaitForCutsceneToEnd(0);
     SetSpEffect(0, 200000100);
     Unknown201008(20000200);
 });
@@ -206,7 +206,7 @@ Event(5330, Default, function() {
 Event(5350, Default, function(X0_4) {
     Unknown200014(2000);
     PlayCutsceneToPlayerAndWarpWithStablePositionUpdate(X0_4, CutscenePlayMode.Skippable);
-    UnknownCondition20(0);
+    WaitForCutsceneToEnd(0);
     SetSpEffect(0, 0);
 });
 
@@ -216,7 +216,7 @@ Event(5355, Default, function(X0_4, X4_4) {
     PlayCutsceneToPlayerUnknown200204(X4_4, 136, 2106302700, 41000000, 20000);
     Unknown20013(33554432, 0, 2);
     PlayCutsceneToPlayerAndWarpWithStablePositionUpdate(X0_4, CutscenePlayMode.SkippableWithFadeOutSkip);
-    UnknownCondition20(0);
+    WaitForCutsceneToEnd(0);
     SetSpEffect(0, 0);
 });
 
@@ -228,7 +228,7 @@ Event(5359, Default, function(X0_4, X4_4, X8_4) {
     PlayCutsceneToPlayerUnknown200204(X8_4, CutscenePlayMode.SkippableWithFadeOutSkip, 2106302700, 41000000, 20000);
     Unknown20013(33554432, 0, 2);
     PlayCutsceneToPlayerAndWarpWithStablePositionUpdate(X0_4, CutscenePlayMode.SkippableWithFadeOutSkip);
-    UnknownCondition20(0);
+    WaitForCutsceneToEnd(0);
     SetSpEffect(0, 0);
 });
 
@@ -511,7 +511,7 @@ Event(5610, Default, function() {
     ClearSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+// 
 Event(5700, Default, function(X0_4, X4_4, X8_4, X12_4, X16_4, X20_4, X24_4, X28_4) {
     ForceAnimationPlayback(X0_4, 100, true, false, false, Equal, 1);
     IfEntityInoutsideRadiusOfEntity(MAIN, InsideOutsideState.Inside, 20000, X0_4, 21, 1);
@@ -1583,4 +1583,3 @@ Event(6010, Default, function() {
     SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4916);
     AwardItemLot(19030);
 });
-
