@@ -5,8 +5,8 @@ Add unique parts for completing the final wave of each gauntlet
 Add difficulty options (adjusts enemy AP, but adjusts the loot chance too)
 
 1. Grid 135 - m10_00 - 9200
-2. Bona Dea Dunes - m50_60 - 9201
-3. The Wall - m50_30 - 9202
+2. Bona Dea Dunes - m50_60 - 9201 
+3. The Wall - m50_30 - 9202 
 4. Xylem  the Floating City - m20_00 - 9203
 5. Watchpoint Alpha - m41_00 - 9204
 6. Institute City - m41_10 - 9205

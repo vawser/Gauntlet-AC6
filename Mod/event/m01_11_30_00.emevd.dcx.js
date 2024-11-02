@@ -21,6 +21,15 @@ Event(0, Default, function() {
     //===============
     // Wave 1
     InitializeEvent(0, 3101, 100); 
+    InitializeEvent(1, 3101, 101); 
+    InitializeEvent(0, 3100, 102); 
+    InitializeEvent(1, 3100, 103); 
+    InitializeEvent(2, 3100, 104); 
+    InitializeEvent(3, 3100, 105); 
+    InitializeEvent(4, 3100, 106); 
+    InitializeEvent(5, 3100, 107); 
+    InitializeEvent(6, 3100, 108);
+    InitializeEvent(7, 3100, 109);   
 });
 
 //=================================================
@@ -41,27 +50,85 @@ Event(3200, Default, function(X0_4) {
 //=================================================
 Event(3000, Default, function() {
     ChangeCharacterEnableState(5300, Disabled);
-    ChangeCharacterEnableState(100, Disabled);
     
     InitializeCommonEvent(6000, 0);
     
-    //WaitFixedTimeSeconds(5);
+    WaitFixedTimeSeconds(5);
+    
+    SetSpEffect(20000, 9993200);
     
     //=================================================
     // Waves
     //=================================================
-    // Wave 1 - 
+    // Wave 1 - Option A
     InitializeEvent(0, 3001, 0);
     InitializeEvent(1, 3200, 5301);
+    
+    // Wave 2 - Light Cavalry
+    InitializeEvent(0, 3002, 0);
+    InitializeEvent(2, 3200, 5302);
+    
+    // Wave 3 - Spider MT + TOYBOX MT
+    InitializeEvent(0, 3003, 0);
+    InitializeEvent(3, 3200, 5303);
+    
+    // Wave 4 - Ekdromoi
+    InitializeEvent(0, 3004, 0);
+    InitializeEvent(4, 3200, 5304);
+    
+    // Wave 5 - Boss: Bonewheel
+    InitializeEvent(0, 3005, 0);
+    InitializeEvent(5, 3200, 5305);
+    
+    WaitForEventFlag(ON, TargetEventFlagType.EventFlag, 4515);
+    WaitFixedTimeSeconds(5);
+    SetEventFlag(TargetEventFlagType.EventFlag, 4591, ON);
 });
 
 //=================================================
-// Generator Test
+// Wave 1
 //=================================================
 Event(3001, Default, function() {
-    IfEnemyActionButton(MAIN, 0, 0, 0, 295);
-    DisplayTextEffectMessage(10);
+    const WaveStartText = 100;
+    const WaveIntermission = 15;
+    const WaveEndText = 90;
+    
+    // Wave Start:
+    DisplayTextEffectMessage(WaveStartText);
+    WaitFixedTimeSeconds(2);
+    EndTextEffectMessage(3);
+    
+    // Enemies to Spawn:
+    ChangeCharacterEnableState(100, Enabled);
+    ChangeCharacterEnableState(102, Enabled);
+    ChangeCharacterEnableState(103, Enabled);
+    ChangeCharacterEnableState(104, Enabled);
+    ChangeCharacterEnableState(105, Enabled);
+    
+    WaitRandomTimeSeconds(1, 3);
+    
+    ChangeCharacterEnableState(101, Enabled);
+    ChangeCharacterEnableState(106, Enabled);
+    ChangeCharacterEnableState(107, Enabled);
+    ChangeCharacterEnableState(108, Enabled);
+    ChangeCharacterEnableState(109, Enabled);
+    
+    // Wave Duration
+    IfCharacterRatioDeadalive(OR_01, 5301, DeathState.Dead, Equal, 1);
+    IfElapsedSeconds(OR_01, 180);
+    IfConditionGroup(MAIN, PASS, OR_01);
+    
+    // Wave End:
+    DisplayTextEffectMessage(WaveEndText);
+    WaitFixedTimeSeconds(2);
+    EndTextEffectMessage(3);
+    
+    // Rest Time
+    WaitFixedTimeSeconds(WaveIntermission);
+    
+    SetEventFlag(TargetEventFlagType.EventFlag, 4501, ON);
 });
+
 
 //=================================================
 // Loot System - Basic Enemies

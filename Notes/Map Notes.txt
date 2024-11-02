@@ -1,9 +1,21 @@
+#-------------------------------------------
 # Creating an ACCESS interactable
+#-------------------------------------------
 With a dummy enemy: c9980
 - Set Action Button ID to the desired action button setup (e.g. 20100010)
 - Set NPC Param ID to a dummy entry (99801000)
 - Set Think Param ID to a dummy entry (99800000)
 - Set Talk ID to the ACCESS esd (510)
 
+Enemy must have SpEffect 9994847 present on them for the ESD to work.
+- Can be in the NpcParam or added via EMEVD
+
 In EMEVD:
 - Use the IfEnemyActionButton(MAIN, 0, 0, 0, <x>); to check for usage, <x> being the entity ID of the dummy enemy
+
+#-------------------------------------------
+# Adding a Supply Sherpa
+#-------------------------------------------
+Create an asset:
+- Set ModelName to AEG840_900
+- set Asset_TalkID to 564

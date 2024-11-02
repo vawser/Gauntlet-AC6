@@ -299,8 +299,7 @@ Event(2210, Default, function() {
     // Dummy entity is loaded
     IfCharacterBackreadStatus(MAIN, 295, true, Equal, 1);
     
-    // ?
-    Unknown41008(0, 295);
+    IfEnemyActionButton(MAIN, 0, 0, 0, 295);
     
     // Player give SpEffect
     SetSpEffect(20000, 2010100);
