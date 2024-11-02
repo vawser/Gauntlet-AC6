@@ -6,12 +6,15 @@ Add difficulty options (adjusts enemy AP, but adjusts the loot chance too)
 
 1. Grid 135 - m10_00 - 9200
 2. Bona Dea Dunes - m50_60 - 9201 
+
+# TODO
 3. The Wall - m50_30 - 9202 
 4. Xylem  the Floating City - m20_00 - 9203
 5. Watchpoint Alpha - m41_00 - 9204
 6. Institute City - m41_10 - 9205
 7. LOC Station 31 - m30_00 - 9206
 
+# ENEMIES
 30000050 Guard MT (Walker) (Kinetic Gun) [500]
 30000051 Guard MT (Walker) (Kinetic Gun) [2000]
 30000150 Guard MT (Walker) (Laser Gun) [500]

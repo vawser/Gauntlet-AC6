@@ -583,7 +583,7 @@ Event(6000, Default, function() {
     SetEventFlag(TargetEventFlagType.EventFlag, 4515, OFF); // Trial Complete
     
     SetEventFlag(TargetEventFlagType.EventFlag, 4591, OFF); // End Trial early
-    SetEventFlag(TargetEventFlagType.EventFlag, 4592, ON);  // Display Target Markers
+    //SetEventFlag(TargetEventFlagType.EventFlag, 4592, ON);  // Display Target Markers
     
     // 4600 - 4699 are the random roll range
 });

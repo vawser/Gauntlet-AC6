@@ -95,19 +95,6 @@ Event(0, Default, function() {
 });
 
 //=================================================
-// Marker System - <wave group id>
-//=================================================
-Event(3200, Default, function(X0_4) {
-    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 4592);
-    ClearSpEffect(X0_4, 9991003);
-    
-    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4592);
-    SetSpEffect(X0_4, 9991003);
-    
-    EndUnconditionally(EventEndType.Restart);
-});
-
-//=================================================
 // Trial System
 //=================================================
 Event(3000, Default, function() {
@@ -384,7 +371,15 @@ Event(3100, Default, function(X0_4) {
     IfCharacterDeadalive(MAIN, X0_4, DeathState.Dead, Equal, 1);
     
     BatchSetEventFlags(4800, 4899, OFF); 
+    
+    // Standard Mode
+    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 4580);
     RandomlySetEventFlagInRange(4800, 4849, ON); // 2% chance
+    
+    // Hard Mode
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4580);
+    RandomlySetEventFlagInRange(4800, 4819, ON); // 5% chance
+    
     EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 4800);
     
     InitializeCommonEvent(6010, 0);
@@ -397,7 +392,15 @@ Event(3101, Default, function(X0_4) {
     IfCharacterDeadalive(MAIN, X0_4, DeathState.Dead, Equal, 1);
     
     BatchSetEventFlags(4800, 4899, OFF); 
+    
+    // Standard Mode
+    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 4580);
     RandomlySetEventFlagInRange(4800, 4803, ON); // 25% chance
+    
+    // Hard Mode
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4580);
+    RandomlySetEventFlagInRange(4800, 4801, ON); // 50% chance
+    
     EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 4800);
     
     InitializeCommonEvent(6010, 0);
@@ -409,6 +412,11 @@ Event(3101, Default, function(X0_4) {
 Event(3102, Default, function(X0_4) {
     IfCharacterDeadalive(MAIN, X0_4, DeathState.Dead, Equal, 1);
     
+    // Base Reward
+    InitializeCommonEvent(6010, 0);
+    
+    // Hard Mode - Additional Reward
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4580);
     InitializeCommonEvent(6010, 0);
 });
 
@@ -418,9 +426,32 @@ Event(3102, Default, function(X0_4) {
 Event(3103, Default, function(X0_4) {
     IfCharacterDeadalive(MAIN, X0_4, DeathState.Dead, Equal, 1);
     
+    // Base Reward
+    InitializeCommonEvent(6010, 0);
+    
+    // Hard Mode - Additional Reward
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4580);
     InitializeCommonEvent(6010, 0);
     
     // Special Item Here
 });
 
+//=================================================
+// Enemy SpEffects - <wave group id>
+//=================================================
+Event(3200, Default, function(X0_4) {
+    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 4592);
+    ClearSpEffect(X0_4, 9991003);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4592);
+    SetSpEffect(X0_4, 9991003);
+    
+    SkipIfEventFlag(1, ON, TargetEventFlagType.EventFlag, 4580);
+    ClearSpEffect(X0_4, 30000);
+    
+    SkipIfEventFlag(1, OFF, TargetEventFlagType.EventFlag, 4580);
+    SetSpEffect(X0_4, 30000);
+    
+    EndUnconditionally(EventEndType.Restart);
+});
 
