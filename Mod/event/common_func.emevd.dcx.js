@@ -7,6 +7,9 @@
 // @version    3.4.2
 // ==/EMEVD==
 
+//=====================================================
+// NPAC withdrawal catapult event
+//=====================================================
 Event(5200, Default, function(X0_4, X4_4, X8_4) {
     IfCharacterHasSpEffect(MAIN, X0_4, 9999010, true, Equal, 1);
     SetSpEffect(X0_4, 5000);
@@ -24,6 +27,9 @@ Event(5200, Default, function(X0_4, X4_4, X8_4) {
     EndUnconditionally(EventEndType.Restart);
 });
 
+//=====================================================
+// Destruction OBJ reaction event
+//=====================================================
 Event(5220, Default, function(X0_4, X4_4, X8_4, X12_4, X16_4) {
     IfCharacterHPRatio(AND_01, X0_4, LessOrEqual, 0, Equal, 1);
     GotoIfConditionGroupStateUncompiled(Label.Label0, PASS, AND_01);
@@ -35,6 +41,9 @@ Event(5220, Default, function(X0_4, X4_4, X8_4, X12_4, X16_4) {
     EndUnconditionally(EventEndType.End);
 });
 
+//=====================================================
+// NPAC reinforcement catapult event
+//=====================================================
 Event(5250, Default, function(X0_4, X4_4, X8_4, X12_4, X16_4, X20_4, X24_4, X28_4) {
     IfCharacterHasSpEffect(MAIN, X0_4, 9999010, true, Equal, 1);
     SetSpEffect(X0_4, 9999010);
@@ -48,12 +57,18 @@ Event(5250, Default, function(X0_4, X4_4, X8_4, X12_4, X16_4, X20_4, X24_4, X28_
     EndUnconditionally(EventEndType.Restart);
 });
 
+//=====================================================
+// Cutscene before entering the orbit
+//=====================================================
 Event(5260, Default, function(X0_4) {
     PlayCutsceneToPlayerAndWarpWithStablePositionUpdate(X0_4, CutscenePlayMode.SkippableWithFadeOutSkip);
     WaitForCutsceneToEnd(0);
     SetSpEffect(0, 0);
 });
 
+//=====================================================
+// AC repair kit count
+//=====================================================
 Event(5270, Default, function(X0_4) {
     SetSpEffect(X0_4, 9990400);
     IfCharacterHasSpEffect(OR_01, X0_4, 9403, true, Equal, 1);
@@ -99,6 +114,9 @@ Event(5270, Default, function(X0_4) {
     SetSpEffect(0, 0);
 });
 
+//=====================================================
+// light slow effect
+//=====================================================
 Event(5280, Default, function(X0_4) {
     IfCharacterHPRatio(MAIN, X0_4, Equal, 0, Equal, 1);
     SetSpEffect(0, 0);
@@ -112,7 +130,9 @@ Event(5280, Default, function(X0_4) {
     Unknown20031036(1061997773, 1036831949);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Pre-mission state_CS_Sortie from garage
+//=====================================================
 Event(5300, Default, function(X0_4, X4_4) {
     PlaySE(0, SoundType.BGM, 999992020);
     SetRelativeEventFlag(0, 5920, 1);
@@ -124,7 +144,9 @@ Event(5300, Default, function(X0_4, X4_4) {
     Unknown201008(20000200);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Pre-mission state_CS_Sortie from garage_Continuous version
+//=====================================================
 Event(5305, Default, function(X0_4, X4_4, X8_4) {
     SetRelativeEventFlag(0, 5920, 1);
     PlaySE(20000, SoundType.BGM, 999992020);
@@ -137,7 +159,9 @@ Event(5305, Default, function(X0_4, X4_4, X8_4) {
     Unknown201008(20000200);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Pre-mission state_CS_Prologue-only sortie_Continuous version
+//=====================================================
 Event(5306, Default, function(X0_4, X4_4, X8_4, X12_4) {
     PlaySE(0, SoundType.BGM, 999992020);
     SetRelativeEventFlag(0, 5920, 1);
@@ -156,7 +180,9 @@ Event(5306, Default, function(X0_4, X4_4, X8_4, X12_4) {
     Unknown201008(20000200);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Pre-mission state_CS_Prologue-only sortie_Continuous version_During free mission
+//=====================================================
 Event(5307, Default, function(X0_4, X4_4, X8_4) {
     PlaySE(20000, SoundType.BGM, 999992020);
     SetRelativeEventFlag(0, 5920, 1);
@@ -174,7 +200,9 @@ Event(5307, Default, function(X0_4, X4_4, X8_4) {
     Unknown201008(20000200);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Pre-mission state_CS_Sortie from garage_Continuous version_Ice worm only
+//=====================================================
 Event(5308, Default, function(X0_4, X4_4, X8_4) {
     PlaySE(0, SoundType.BGM, 999992020);
     SetRelativeEventFlag(0, 5920, 1);
@@ -187,22 +215,30 @@ Event(5308, Default, function(X0_4, X4_4, X8_4) {
     Unknown201008(20000200);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Mission status_Restart event from checkpoint
+//=====================================================
 Event(5310, Default, function(X0_4) {
     Unknown20031046(X0_4);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Mission status_Camera specified event when restarting from Sherpa
+//=====================================================
 Event(5320, Default, function(X0_4) {
     Unknown20031046(X0_4);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Mission status_Sherpa used flag
+//=====================================================
 Event(5330, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Success completion status_CS_Return to garage
+//=====================================================
 Event(5350, Default, function(X0_4) {
     Unknown200014(2000);
     PlayCutsceneToPlayerAndWarpWithStablePositionUpdate(X0_4, CutscenePlayMode.Skippable);
@@ -210,7 +246,9 @@ Event(5350, Default, function(X0_4) {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Successful completion status_CS_Return to garage_Continuous version
+//=====================================================
 Event(5355, Default, function(X0_4, X4_4) {
     Unknown200014(2000);
     PlayCutsceneToPlayerUnknown200204(X4_4, 136, 2106302700, 41000000, 20000);
@@ -220,7 +258,9 @@ Event(5355, Default, function(X0_4, X4_4) {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Successfully completed state_CS_Return to garage_Continuous version_Biological weapon ALT version
+//=====================================================
 Event(5359, Default, function(X0_4, X4_4, X8_4) {
     Unknown200014(2000);
     PlayCutsceneToPlayerUnknown200204(X4_4, 136, 2106302700, 41000000, 20000);
@@ -232,37 +272,51 @@ Event(5359, Default, function(X0_4, X4_4, X8_4) {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Success completion state_CS_Return to garage_Transition flag
+//=====================================================
 Event(5360, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Success completion status_Dark fade conversation end_Transition flag
+//=====================================================
 Event(5370, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Failure end status_Great cavity and furnace only_Transition flag
+//=====================================================
 Event(5380, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Failure end state_Boss TIPS_Transition flag
+//=====================================================
 Event(5385, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Success completion status_No completion display
+//=====================================================
 Event(5390, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event:
+//=====================================================
+// Acceptance status complete_Event flag
+//=====================================================
 Event(5401, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event:
+//=====================================================
+// Mission status completion_Event flag
+//=====================================================
 Event(5402, Default, function() {
     GotoIfEventFlag(Label.Label0, ON, TargetEventFlagType.EventFlag, 2101402000);
     SetCharacterInvincibility(20000, Enabled);
@@ -274,54 +328,74 @@ Event(5402, Default, function() {
     Unknown201008(20000200);
 });
 
-// ESD-Scheduled Event: flag set when skipping cutscenes
+//=====================================================
+// Result processing completed_Success
+//=====================================================
 Event(5403, Default, function() {
     SetEventFlagAc(6105, OFF);
 });
 
-// ESD-Scheduled Event: spawn immortality?
+//=====================================================
+// Success DeBF state completion_Event flag
+//=====================================================
 Event(5404, Default, function() {
     SetCharacterImmortality(20000, Enabled);
     SetSpEffect(20000, 9990300);
 });
 
-// ESD-Scheduled Event:
+//=====================================================
+// Success completion status completion_Event flag
+//=====================================================
 Event(5405, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event:
+//=====================================================
+// Production status_Success completion_Event flag
+//=====================================================
 Event(5406, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event:
+//=====================================================
+// Result processing completed_Failure
+//=====================================================
 Event(5413, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event:
+//=====================================================
+// Failure DeBF state completion_Event flag
+//=====================================================
 Event(5414, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event:
+//=====================================================
+// Failure end status completion_Event flag
+//=====================================================
 Event(5415, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event:
+//=====================================================
+// Production status_Failure completion_Event flag
+//=====================================================
 Event(5416, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: COMMENCE MISSION text
+//=====================================================
+// Mission Start: Effect
+//=====================================================
 Event(5420, Default, function() {
     DisplayTextEffectMessage(10);
     SetSpEffect(10000, 500000005);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Mission Success
+//=====================================================
 Event(5424, Default, function() {
     EndTextEffectMessage(3);
     EndTextEffectMessage(0);
@@ -353,7 +427,9 @@ Event(5424, Default, function() {
     EndTextEffectMessage(1);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Mission Failure
+//=====================================================
 Event(5425, Default, function() {
     EndTextEffectMessage(3);
     EndTextEffectMessage(0);
@@ -376,14 +452,18 @@ Event(5425, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: MISSION UPATE text
+//=====================================================
+// Mission Update
+//=====================================================
 Event(5426, Default, function() {
     DisplayTextEffectMessage(13);
     IfElapsedSeconds(MAIN, 2.5);
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: MISSION FAILED text
+//=====================================================
+// Mission Failure: Exclusive for Caverns and Furnaces
+//=====================================================
 Event(5427, Default, function() {
     EndTextEffectMessage(3);
     EndTextEffectMessage(0);
@@ -393,125 +473,172 @@ Event(5427, Default, function() {
     DisplayTextEffectMessage(12);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// outside area display
+//=====================================================
 Event(5430, Default, function() {
     DisplayTextEffectMessage(111);
     IfElapsedSeconds(MAIN, 2.5);
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Kill because it is out of range
+//=====================================================
 Event(5431, Default, function() {
     DisplayTextEffectMessage(12);
     ForceCharacterDeath(10000, true);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// For tips for failure
+//=====================================================
 Event(5432, Default, function() {
     SetBossBGM(1);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// area determination_inside
+//=====================================================
 Event(5440, Default, function(X0_4) {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 10000, X0_4, 1);
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Area determination_Outside
+//=====================================================
 Event(5450, Default, function(X0_4) {
     IfInoutsideArea(MAIN, InsideOutsideState.Outside, 10000, X0_4, 1);
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// area determination_new edition
+//=====================================================
 Event(5460, Default, function() {
     Unknown329(0);
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// outside area judgment_new edition
+//=====================================================
 Event(5461, Default, function() {
     Unknown329(256);
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// area departure determination_new edition
+//=====================================================
 Event(5462, Default, function() {
     Unknown329(512);
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Connection Map: movement
+//=====================================================
 Event(5470, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Connection Map: hit invalidation
+//=====================================================
 Event(5480, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Connection Map: Hits Enabled
+//=====================================================
 Event(5481, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// FE invalidation
+//=====================================================
 Event(5490, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// FE Enable
+//=====================================================
 Event(5491, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: ? - SpEffect plays a VFX
+//=====================================================
+// Special effects for VOB mode
+//=====================================================
 Event(5500, Default, function() {
     SetSpEffect(10000, 9040);
 });
 
-// ESD-Scheduled Event: ? - SpEffect plays a VFX
+//=====================================================
+// Special effects for canceling VOB mode
+//=====================================================
 Event(5501, Default, function() {
     SetSpEffect(10000, 9040);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Garage Event: Garage initialization
+//=====================================================
 Event(5551, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Garage Event: Location discovery_One shot
+//=====================================================
 Event(5560, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Garage Event: Garage access_One shot
+//=====================================================
 Event(5561, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Garage Event: Uniform hardening animation
+//=====================================================
 Event(5562, Default, function() {
     SetSpEffect(0, 0);
 });
 
+//=====================================================
+// Garage Event: Action button determination
+//=====================================================
 Event(5563, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Training: start production
+//=====================================================
 Event(5600, Default, function() {
     ClearSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Training: Return to the garage
+//=====================================================
 Event(5610, Default, function() {
     Unknown20031048(0);
     ClearSpEffect(0, 0);
 });
 
-// 
+//=====================================================
+// Short distance jump hill
+//=====================================================
 Event(5700, Default, function(X0_4, X4_4, X8_4, X12_4, X16_4, X20_4, X24_4, X28_4) {
     ForceAnimationPlayback(X0_4, 100, true, false, false, Equal, 1);
     IfEntityInoutsideRadiusOfEntity(MAIN, InsideOutsideState.Inside, 20000, X0_4, 21, 1);
@@ -537,33 +664,45 @@ Event(5700, Default, function(X0_4, X4_4, X8_4, X12_4, X16_4, X20_4, X24_4, X28_
     EndUnconditionally(EventEndType.Restart);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Success Result: BGM mute flag
+//=====================================================
 Event(5800, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Success Result: BGM mute ID3 flag
+//=====================================================
 Event(5801, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Success Result: BGM flag as is
+//=====================================================
 Event(5810, Default, function() {
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Retry Judgment
+//=====================================================
 Event(5820, Default, function() {
     Unknown31012(0);
     SetSpEffect(0, 0);
 });
 
-// ESD-Scheduled Event: 
+//=====================================================
+// Initialization process for test map
+//=====================================================
 Event(5900, Default, function() {
     SetSpEffect(20000, 500000005);
 });
 
+//=====================================================
 // GAUNTLET: Set Default Flags
+//=====================================================
 Event(6000, Default, function() {
     SetEventFlag(TargetEventFlagType.EventFlag, 4500, OFF); // WAVE 1
     SetEventFlag(TargetEventFlagType.EventFlag, 4501, OFF); // WAVE 2
@@ -588,7 +727,9 @@ Event(6000, Default, function() {
     // 4600 - 4699 are the random roll range
 });
 
+//=====================================================
 // GAUNTLET: Item Roll
+//=====================================================
 Event(6010, Default, function() {
     BatchSetEventFlags(4600, 4916, OFF);
     RandomlySetEventFlagInRange(4600, 4916, ON);

@@ -7,6 +7,7 @@
 // @version    3.4.2
 // ==/EMEVD==
 
+// constructor
 Event(0, Default, function() {
     EsdTriggeredCommonEvent(0, 5401, 0);
     EsdTriggeredCommonEvent(0, 5402, 0);
@@ -229,6 +230,7 @@ Event(0, Default, function() {
     Unknown20041010(290, 50001103, -1, 170);
 });
 
+// Map asset initialization event
 Event(2100, Default, function() {
     ForceAnimationPlayback(10101000, 13, true, false, false, Equal, 1);
     ForceAnimationPlayback(10101001, 13, true, false, false, Equal, 1);
@@ -236,6 +238,7 @@ Event(2100, Default, function() {
     ChangeCharacterEnableState(2101100295, Disabled);
 });
 
+// Pharaon initialization event for boss battles
 Event(2110, Default, function() {
     Unknown200454(800, 0);
     SetCharacterDefaultBackreadState(800, Enabled);
@@ -243,50 +246,60 @@ Event(2110, Default, function() {
     SetCharacterAIState(800, Disabled);
 });
 
+// Condition judgment_Tutorial room interior_Enemy annihilation judgment
 Event(2200, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Tute movement room area judgment_Movement
 Event(2201, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2500, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Tute movement room area judgment_Boost
 Event(2202, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2715, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Tute movement room area judgment_Jump rise
 Event(2203, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2501, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Tute moving room area judgment_Look back EN
 Event(2204, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2502, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Tute movement room area judgment_Lock on
 Event(2205, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2200, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Tute movement room area judgment_Indoor movement judgment on the bridge
 Event(2206, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2716, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_Chute Bridge Room Area Judgment_Break QB
 Event(2207, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2204, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_Chute Bridge Room Area Judgment_Missile
 Event(2208, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2206, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Tute room external area judgment_Recovery
 Event(2209, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2203, 1);
     SetRelativeEventFlag(0, 2821, 1);
@@ -294,6 +307,7 @@ Event(2209, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_Hacking Catapult completed?
 // Catapult ACCESS interaction
 Event(2210, Default, function() {
     // Dummy entity is loaded
@@ -305,16 +319,19 @@ Event(2210, Default, function() {
     SetSpEffect(20000, 2010100);
 });
 
+// Condition Judgment_Chute Mountain Front Area Judgment_Asab
 Event(2211, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2215, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition determination_Chute Mountain back area_Jumping platform
 Event(2212, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2250, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Chute Mountain left side A layer area judgment_Key guide
 Event(2213, Default, function() {
     IfInoutsideArea(AND_01, InsideOutsideState.Inside, 20000, 2940, 1);
     Unknown31000(257, 3260);
@@ -325,6 +342,7 @@ Event(2213, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// Condition Judgment_Chute Mountain Central Avenue Area Judgment_Key Guide
 Event(2214, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2941, 1);
     SetRelativeEventFlag(0, 2824, 1);
@@ -333,6 +351,7 @@ Event(2214, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// Condition Judgment_Juto Mountain Back A Layer Area Judgment_Key Guide
 Event(2215, Default, function() {
     IfInoutsideArea(AND_01, InsideOutsideState.Inside, 20000, 2942, 1);
     Unknown31000(257, 3180);
@@ -343,26 +362,31 @@ Event(2215, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// Conditional judgment_Chute Mountain left side A layer_Was the target enemy completely annihilated?
 Event(2216, Default, function() {
     IfUnknown416(0, 5220, 5, 0, 0, 1065353216);
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_Chute Mountain Central Boulevard_Was the target enemy completely annihilated?
 Event(2217, Default, function() {
     IfUnknown416(0, 5221, 5, 0, 0, 1065353216);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_A layer on the back side of Chuto Mountain_Was the target enemy completely annihilated?
 Event(2218, Default, function() {
     IfUnknown416(0, 5223, 5, 0, 0, 1065353216);
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_A layer in front of Chuto Mountain_Was the target enemy completely annihilated?
 Event(2219, Default, function() {
     IfUnknown416(0, 5202, 5, 0, 0, 1065353216);
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_PC Have you arrived at the mountain town?
 Event(2220, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 10000, 2310, 1);
     WaitForCutsceneToEnd(0);
@@ -376,11 +400,13 @@ Event(2220, Default, function() {
     ChangeAssetEnableState(50001103, Enabled);
 });
 
+// Condition judgment_Mountain town_Marker display judgment
 Event(2221, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2300, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Cute A layer_Did you use recovery medicine?
 Event(2222, Default, function() {
     IfCharacterHPRatio(OR_01, 20000, GreaterOrEqual, 0.8, Equal, 1);
     IfCharacterHasSpEffect(OR_01, 20000, 9990413, true, Equal, 1);
@@ -388,6 +414,7 @@ Event(2222, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Tute A layer_HP check
 Event(2223, Default, function() {
     IfCharacterHPRatio(OR_01, 20000, GreaterOrEqual, 0.8, Equal, 1);
     IfCharacterHasSpEffect(OR_01, 20000, 9990413, true, Equal, 1);
@@ -395,6 +422,7 @@ Event(2223, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_Hacking_Complete left A layer debris
 Event(2230, Default, function() {
     Unknown41001(0, 290, 3, 1065353216);
     SetRelativeEventFlag(0, 2835, 1);
@@ -412,6 +440,7 @@ Event(2230, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_Hacking_Central Odori completed.
 Event(2231, Default, function() {
     Unknown41001(0, 291, 3, 1065353216);
     SetRelativeEventFlag(0, 2836, 1);
@@ -429,6 +458,7 @@ Event(2231, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_Hacking_Dear A layer debris completed.
 Event(2232, Default, function() {
     Unknown41001(0, 292, 3, 1065353216);
     SetRelativeEventFlag(0, 2837, 1);
@@ -446,26 +476,31 @@ Event(2232, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Hacking_Dummy character for boss battle_Slight hacking
 Event(2234, Default, function() {
     Unknown41001(0, 923, 5, 1061158912);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Hacking_Dummy character for boss battle_Significant hacking
 Event(2235, Default, function() {
     Unknown41001(0, 923, 5, 1056964608);
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_Mountain Town_Approaching the boss room area
 Event(2236, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2503, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Pharaon battle begins?
 Event(2240, Default, function() {
     IfCharacterHasSpEffect(MAIN, 20000, 9999, true, Equal, 1);
     SetSpEffect(0, 0);
 });
 
+// Conditional judgment_Did you defeat Pharaon?
 Event(2241, Default, function() {
     IfCharacterHPRatio(MAIN, 800, LessOrEqual, 0.5, Equal, 1);
     Unknown201008(30000102);
@@ -477,21 +512,25 @@ Event(2241, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conditional judgment_Did you defeat Pharaon_Derivation
 Event(2242, Default, function() {
     IfCharacterHasSpEffect(MAIN, 800, 9990600, true, Equal, 1);
     Unknown201008(30000107);
 });
 
+// Condition judgment_Conversation judgment_Pharaon appearance conversation
 Event(2250, Default, function() {
     IfCharacterHasSpEffect(MAIN, 810, 2010700, true, Equal, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_Conversation Judgment_Pharaon Appearance Conversation 02
 Event(2251, Default, function() {
     IfCharacterHasSpEffect(MAIN, 810, 2010701, true, Equal, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Conversation judgment_Mountain town Gaya conversation 01
 Event(2252, Default, function() {
     IfInoutsideArea(AND_01, InsideOutsideState.Inside, 20000, 2720, 1);
     Unknown41004(255, 20000, 510, 3);
@@ -506,6 +545,7 @@ Event(2252, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Conversation judgment_Mountain town Gaya conversation 01_Under attack
 Event(2253, Default, function() {
     Unknown41(255, 510, 20000);
     Unknown41(255, 511, 20000);
@@ -521,6 +561,7 @@ Event(2253, Default, function() {
     Unknown20041021(5202, 20000, 1092616192, 0);
 });
 
+// Condition Judgment_Conversation Judgment_Hacking OBJ Conversation 01_ Approaching
 Event(2254, Default, function() {
     IfInoutsideArea(OR_01, InsideOutsideState.Inside, 20000, 2940, 1);
     IfCharacterHasSpEffect(OR_01, 540, 4500, false, Equal, 1);
@@ -529,11 +570,13 @@ Event(2254, Default, function() {
     Unknown20041021(5220, 20000, 1084227584, 1);
 });
 
+// Condition Judgment_Conversation Judgment_Hacking OBJ Conversation 02_ Approaching
 Event(2255, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2941, 1);
     Unknown20041021(5221, 20000, 1092616192, 0);
 });
 
+// Condition Judgment_Conversation Judgment_Hacking OBJ Conversation 03_ Approaching
 Event(2256, Default, function() {
     IfInoutsideArea(AND_01, InsideOutsideState.Inside, 20000, 2942, 1);
     Unknown41004(255, 20000, 530, 3);
@@ -545,6 +588,7 @@ Event(2256, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Conversation judgment_Mountain town OBJ03_Under attack
 Event(2257, Default, function() {
     Unknown41(255, 520, 20000);
     Unknown41(255, 522, 20000);
@@ -566,15 +610,18 @@ Event(2257, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Conversation judgment_Boss battle conversation_Grenade fired
 Event(2260, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Conversation judgment_Boss battle conversation_Staggered
 Event(2261, Default, function() {
     IfCharacterHasSpEffect(MAIN, 800, 2010704, true, Equal, 1);
     SetSpEffect(0, 0);
 });
 
+// Condition Judgment_Conversation Judgment_Boss Battle Conversation_Grenade shot flag judgment
 Event(2262, Default, function() {
     IfCharacterHasSpEffect(MAIN, 800, 2010703, true, Equal, 1);
     SetRelativeEventFlag(0, 2260, 1);
@@ -586,6 +633,7 @@ Event(2262, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// Condition judgment_Conversation judgment_First time guard mechanism
 Event(2270, Default, function() {
     Unknown41004(255, 20000, 300, 3);
     Unknown41004(255, 20000, 301, 3);
@@ -604,6 +652,7 @@ Event(2270, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Additional event_Mountain_Asabu end judgment
 Event(2271, Default, function() {
     IfInoutsideArea(OR_01, InsideOutsideState.Inside, 20000, 2730, 1);
     IfCharacterHasSpEffect(OR_01, 501, 4500, false, Equal, 1);
@@ -613,6 +662,7 @@ Event(2271, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Condition judgment_Conversation judgment_Mountain town Gaya conversation 02
 Event(2280, Default, function() {
     IfInoutsideArea(AND_01, InsideOutsideState.Inside, 20000, 2721, 1);
     Unknown41(255, 550, 20000);
@@ -628,11 +678,13 @@ Event(2280, Default, function() {
     Unknown20041021(5250, 20000, 1092616192, 0);
 });
 
+// Condition judgment_Conversation judgment_Mountain town Gaya conversation 02_Target annihilated
 Event(2281, Default, function() {
     IfUnknown416(0, 5220, 5, 0, 0, 1065353216);
     SetSpEffect(0, 0);
 });
 
+// Event execution_Cute A layer outdoor door opening
 Event(2300, Default, function() {
     IfActionButtonInArea(MAIN, 20100050, 2110000500);
     SetRelativeEventFlag(0, 2820, 1);
@@ -640,6 +692,7 @@ Event(2300, Default, function() {
     ForceAnimationPlayback(2110000500, 11, false, false, false, Equal, 1);
 });
 
+// Event execution_Opening the outdoor door of Tute A layer_Linked event 01
 Event(2301, Default, function() {
     Unknown31000(256, 2820);
     IfElapsedSeconds(MAIN, 3);
@@ -647,14 +700,17 @@ Event(2301, Default, function() {
     ForceAnimationPlayback(2110000501, 11, false, false, false, Equal, 1);
 });
 
+// Event execution_CP execution_Mountain town
 Event(2310, Default, function() {
     SetPlayerCheckpoint(911);
 });
 
+// Event execution_CP execution_Pharaon
 Event(2311, Default, function() {
     SetPlayerCheckpoint(910);
 });
 
+// Event execution_CP result reproduction_before boss
 Event(2315, Default, function() {
     ActivateHit(2101104321, Enabled);
     SetRelativeEventFlag(0, 3310, 0);
@@ -664,6 +720,7 @@ Event(2315, Default, function() {
     ForceAnimationPlayback(50001102, 100, true, false, false, Equal, 1);
 });
 
+// Event execution_Pharaon attack on the way
 Event(2320, Default, function() {
     SetCharacterAIState(810, Disabled);
     SetNetworkUpdateRate(810, true, CharacterUpdateFrequency.AlwaysUpdate);
@@ -698,12 +755,14 @@ Event(2320, Default, function() {
     ChangeCharacterEnableState(811, Disabled);
 });
 
+// Event execution_Before Chute Mountain_Target Communist MT
 Event(2321, Default, function() {
     Unknown20041021(501, 20000, 1101004800, 0);
     Unknown20041021(502, 20000, 1101004800, 0);
     Unknown20041021(503, 20000, 1101004800, 0);
 });
 
+// Event execution_Pharaon attack on the way_Derivative event
 Event(2322, Default, function() {
     IfCharacterHasSpEffect(MAIN, 810, 2010700, true, Equal, 1);
     Unknown20031000(2850, 0);
@@ -717,6 +776,7 @@ Event(2322, Default, function() {
     ChangeCharacterEnableState(292, Disabled);
 });
 
+// Event execution_Pharaon attack on the way_Derivative event_Marker activation_2850
 Event(2323, Default, function() {
     Unknown31000(257, 3240);
     Unknown31000(1, 2232);
@@ -735,6 +795,7 @@ Event(2323, Default, function() {
     ChangeCharacterEnableState(292, Enabled);
 });
 
+// Event execution_Pharaon attack on the way_Derivative event_Marker activation_2851
 Event(2324, Default, function() {
     Unknown31000(257, 3240);
     Unknown31000(1, 2231);
@@ -753,6 +814,7 @@ Event(2324, Default, function() {
     ChangeCharacterEnableState(291, Enabled);
 });
 
+// Event execution_Pharaon attack on the way_Derivative event_Marker activation_2852
 Event(2325, Default, function() {
     Unknown31000(257, 3240);
     Unknown31000(1, 2230);
@@ -771,11 +833,13 @@ Event(2325, Default, function() {
     ChangeCharacterEnableState(290, Enabled);
 });
 
+// Event execution_Mountain town initialization event
 Event(2330, Default, function() {
     ChangeCharacterEnableState(923, Disabled);
     ActivateHit(2101104320, Enabled);
 });
 
+// Event execution_Mountain town final point hacking enabled
 Event(2331, Default, function() {
     ChangeCharacterEnableState(923, Enabled);
     Unknown41001(0, 923, 5, 0);
@@ -789,28 +853,33 @@ Event(2331, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Event execution_Mountain town catapult_Dummy character enabled
 Event(2332, Default, function() {
     ChangeCharacterEnableState(2101100295, Enabled);
 });
 
+// Event execution_target point marker activation_Ent2900
 Event(2370, Default, function() {
     Unknown20031000(2900, 1);
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2900, 1);
     Unknown20031000(2900, 0);
 });
 
+// Event execution_target point marker activation_Ent2905
 Event(2371, Default, function() {
     Unknown20031000(2905, 1);
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2905, 1);
     Unknown20031000(2905, 0);
 });
 
+// Event execution_target point marker activation_Ent2903
 Event(2372, Default, function() {
     Unknown20031000(2903, 1);
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2903, 1);
     Unknown20031000(2903, 0);
 });
 
+// Event execution_target point marker activation_Ent2850
 Event(2380, Default, function() {
     IfElapsedSeconds(MAIN, 0.4);
     Unknown20031000(2850, 1);
@@ -828,6 +897,7 @@ Event(2380, Default, function() {
     Unknown20031000(2860, 0);
 });
 
+// Event execution_target point marker activation_Ent2851
 Event(2381, Default, function() {
     Unknown20031000(2851, 1);
     IfEntityInoutsideRadiusOfEntity(MAIN, InsideOutsideState.Inside, 20000, 290, 400, 1);
@@ -844,6 +914,7 @@ Event(2381, Default, function() {
     Unknown20031000(2861, 0);
 });
 
+// Event execution_target point marker activation_Ent2852
 Event(2382, Default, function() {
     IfElapsedSeconds(MAIN, 0.2);
     Unknown20031000(2852, 1);
@@ -861,6 +932,7 @@ Event(2382, Default, function() {
     Unknown20031000(2862, 0);
 });
 
+// Event execution_target point marker activation_Ent2930
 Event(2385, Default, function() {
     Unknown20031000(2930, 1);
     IfEntityInoutsideRadiusOfEntity(MAIN, InsideOutsideState.Inside, 20000, 923, 400, 1);
@@ -872,6 +944,7 @@ Event(2385, Default, function() {
     Unknown20031000(2920, 0);
 });
 
+// Event execution_target point marker activation_Ent2932
 Event(2386, Default, function() {
     Unknown20031000(2932, 1);
     ActivateHit(2101104321, Enabled);
@@ -882,18 +955,22 @@ Event(2386, Default, function() {
     Unknown20031000(2932, 0);
 });
 
+// Flag_switching information_Ent2850 and 2860
 Event(2390, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_switching information_Ent2851 and 2861
 Event(2391, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_switching information_Ent2852 and 2862
 Event(2392, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Event execution_Boss Pharaon_Initialization
 Event(2500, Default, function() {
     Unknown200454(800, 0);
     SetCharacterDefaultBackreadState(800, Enabled);
@@ -907,6 +984,7 @@ Event(2500, Default, function() {
     SetRelativeEventFlag(0, 2831, 0);
 });
 
+// Event execution_Boss Pharaon_appearance event
 Event(2510, Default, function() {
     IfElapsedFrames(MAIN, 2);
     ActivateHit(2101104300, Enabled);
@@ -945,319 +1023,398 @@ Event(2510, Default, function() {
     DisplayBossHealthBar(Disabled, 800, 0, 2350);
 });
 
+// Flag_CP enable_Mountain town arrival
 Event(2810, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_CP enable_Pharaon battle
 Event(2811, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Chute A layer door open
 Event(2820, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Recovery key guide display
 Event(2821, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Jumping table key guide display
 Event(2822, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Left A layer key guide display
 Event(2823, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Central Odori key guide display
 Event(2824, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Back side A layer key guide display
 Event(2825, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Jumping table key guide_Asab display
 Event(2826, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Hacking stage 1 completed
 Event(2830, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Hacking stage 2 completed
 Event(2831, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Start hacking_Left A layer
 Event(2835, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Start of hacking_Central street
 Event(2836, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Flag_Start hacking_Back A layer
 Event(2837, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_00
 Event(2890, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_01
 Event(2891, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_02
 Event(2892, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_03
 Event(2893, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_04
 Event(2894, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_05
 Event(2895, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_06
 Event(2896, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_07
 Event(2897, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_08
 Event(2898, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_09
 Event(2899, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_10
 Event(2900, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_11
 Event(2901, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_12
 Event(2902, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Temporary flag_for end of October_13
 Event(2903, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101100500_Eliminate the guard mecha
 Event(3000, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101100900_Repair the damage to the aircraft.
 Event(3010, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101100940_It seems the aircraft has already done so.
 Event(3011, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101101000_621 The catapult is ahead
 Event(3020, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101101020_Can you see it descending into that polluted city?
 Event(3030, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101101300_Access the catapult
 Event(3040, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101101720_AC where on earth did it come from?
 Event(3050, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101101740_Armed guerrilla of the Liberation Front?
 Event(3060, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101101760_Detected some remnant reactions of AC.
 Event(3070, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101101780_Visit marker points
 Event(3080, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101101810_Are you listening to what the company is doing?
 Event(3090, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101101815_Enemy attack
 Event(3100, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101101830_It looks like you're getting used to it 621
 Event(3110, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101101840_Confirm unknown AC Is it a stooge of a company?
 Event(3120, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101101850_Deal 621
 Event(3130, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101101860_Click here for pyro information extraction analysis
 Event(3140, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101102100_This license has already been suspended
 Event(3150, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101102105_Next guess
 Event(3151, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101102120_May be dangerous for Taiho Kogyo and Schneider
 Event(3160, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101102130_Independent mercenary not a company?
 Event(3170, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101102140_Use missiles with large numbers
 Event(3180, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101102160_Lets analyze
 Event(3190, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101103700_Pilot is out of rank, not what you're looking for.
 Event(3200, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101103720_Go to the remaining debris reaction
 Event(3210, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101103800_That is
 Event(3220, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101103820_SG Subject Guard has arrived.
 Event(3230, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101103840_It's a patrol of the blockade mechanism.
 Event(3240, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101103900_It's the reported aircraft.
 Event(3250, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101103920_Don't forget the blade that has a shield holder
 Event(3260, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101103940_How about this license?
 Event(3270, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101103960_Avoid getting caught if you belong to a company.
 Event(3280, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101104000_621 Another reaction detected
 Event(3290, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101104020_Send marker informationTry to guess
 Event(3300, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101104040_Vertical catapult for moving to high places
 Event(3301, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101104100_That's it, access that wreckage.
 Event(3310, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101104500_Hmm
 Event(3320, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101104900_mm
 Event(3330, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101104890_Yahame
 Event(3331, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101105300_I already got what I was looking for.
 Event(3340, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101105400_Avoid the bombing by climbing up; you'll get caught up on the ground.
 Event(3350, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101105500_It's working, fold it up.
 Event(3360, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101105700_Confirmed the shooting down of a Planetary Blockade Organization SG large armed helicopter.
 Event(3370, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation flag_101106102_Raven
 Event(3380, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_101106124_End
 Event(3390, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_Hacking 01
 Event(3401, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_Hacking 02
 Event(3402, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Conversation Flag_Hacking 03
 Event(3403, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// I came from CP flag 01
 Event(3701, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// I came from CP flag 02
 Event(3702, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Archive grant
 Event(3800, Default, function() {
     Unknown31000(256, 3380);
     AwardItemLot(2140091525);
 });
 
+// Jumping table key guide area determination
 Event(3810, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2250, 1);
     SetRelativeEventFlag(0, 2822, 1);
@@ -1266,11 +1423,13 @@ Event(3810, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// Asahi key guide area determination
 Event(3811, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2301, 1);
     SetSpEffect(0, 0);
 });
 
+// Jumping platform sub key guide area determination
 Event(3812, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2251, 1);
     SetRelativeEventFlag(0, 2826, 1);
@@ -1279,20 +1438,24 @@ Event(3812, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// Mountain town completion conversation identifier for events
 Event(3820, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Pharaon invincibility treatment
 Event(3830, Default, function() {
     IfCharacterHPRatio(MAIN, 20000, LessOrEqual, 0, Equal, 1);
     SetCharacterInvincibility(800, Enabled);
 });
 
+// Special effects monitoring for Pharaon searchlight
 Event(3840, Default, function() {
     IfCharacterHasSpEffect(MAIN, 800, 60501002, true, Equal, 1);
     SetSpEffect(0, 0);
 });
 
+// Event to confirm whether Pharaon Tips will be released
 Event(3850, Default, function() {
     Unknown31014(1025, 0);
     Unknown31000(257, 2951);
@@ -1300,6 +1463,7 @@ Event(3850, Default, function() {
     SetRelativeEventFlag(0, 5385, 1);
 });
 
+// Confirmation event to issue Pharaon Tips_Wait for a dedicated number of seconds
 Event(3855, Default, function() {
     Unknown31014(767, 0);
     Unknown31014(1535, 1);
@@ -1321,6 +1485,7 @@ Event(3860, Default, function() {
     Unknown200454(5210, 0);
 });
 
+// Boss event control_Blue area_Pharaon is inside
 Event(3900, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 800, 2802, 1);
     SetSpEffect(800, 60500500);
@@ -1329,6 +1494,7 @@ Event(3900, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// Boss event control_yellow area_Pharaon is inside
 Event(3901, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 800, 2800, 1);
     SetSpEffect(800, 60500501);
@@ -1337,6 +1503,7 @@ Event(3901, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// Boss event control_orange area_Pharaon is inside
 Event(3902, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 800, 2801, 1);
     SetSpEffect(800, 60500502);
@@ -1345,6 +1512,7 @@ Event(3902, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// Boss event control_Red area_Pharaon is outside
 Event(3903, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Outside, 800, 2803, 1);
     SetSpEffect(800, 60500503);
@@ -1353,6 +1521,7 @@ Event(3903, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// Boss event control_Blue area_PC is inside
 Event(3910, Default, function() {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, 20000, 2802, 1);
     SetSpEffect(800, 60500510);
@@ -1361,10 +1530,12 @@ Event(3910, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// Add event target
 Event(3920, Default, function() {
     SetCharacterEventTarget(800, 211);
 });
 
+// SE suppression at entrance
 Event(3930, Default, function() {
     Unknown31000(511, 2810);
     Unknown31000(511, 2811);
@@ -1374,6 +1545,7 @@ Event(3930, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// 
 Event(3940, Default, function() {
     Unknown31015(0);
     SetRelativeEventFlag(0, 3945, 0);
@@ -1384,44 +1556,53 @@ Event(3940, Default, function() {
     EndUnconditionally(EventEndType.Restart);
 });
 
+// 
 Event(3945, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// 
 Event(3946, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// 
 Event(3950, Default, function() {
     SetRelativeEventFlag(0, 3955, 0);
     IfElapsedSeconds(MAIN, 0.01);
     SetRelativeEventFlag(0, 3955, 1);
 });
 
+// 
 Event(3951, Default, function() {
     SetRelativeEventFlag(0, 3956, 0);
     IfElapsedSeconds(MAIN, 0.01);
     SetRelativeEventFlag(0, 3956, 1);
 });
 
+// 
 Event(3952, Default, function() {
     SetRelativeEventFlag(0, 3957, 0);
     IfElapsedSeconds(MAIN, 0.01);
     SetRelativeEventFlag(0, 3957, 1);
 });
 
+// 
 Event(3955, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// 
 Event(3956, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// 
 Event(3957, Default, function() {
     SetSpEffect(0, 0);
 });
 
+// Character killing event with low update frequency
 Event(3980, Default, function(X0_4) {
     IfInoutsideArea(MAIN, InsideOutsideState.Inside, X0_4, 2999, 1);
     ForceCharacterDeath(X0_4, false);

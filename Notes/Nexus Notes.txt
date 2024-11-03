@@ -1,0 +1,51 @@
+[color=#9fc5e8][size=4][b]Overview[/b][/size][/color]
+GAUNTLET introduces a new gameplay mode to Armored Core VI. The player can now undertake trials in various locales across Rubicon, facing down waves of enemies, gaining the opportunity to scavenge parts and to accrue COAM.
+
+[color=#9fc5e8][size=4][b]Trials[/b][/size][/color]
+Adds a new gameplay section to the main menu, Trials. 
+Under the Trials section you will find each gauntlet map. 
+
+Currently two maps are available:
+- Gauntlet: Grid 135
+- Gauntlet: Bona Dea Dunes
+
+In the future, the following will be added:
+- Gauntlet: The Wall
+- Gauntlet: Xylem, the Floating City
+- Gauntlet: Watchpoint Alpha
+- Gauntlet: Institute City
+- Gauntlet: LOC Station 31
+
+You can tweak two options within trials:
+- Target Markers: enabling them will display the red target markers on all enemies helping you find them.
+- Harde Mode: 
+
+[color=#9fc5e8][size=4][b]Gauntlets[/b][/size][/color]
+Each gauntlet map follows the basic premise of a wave survival gamemode, but the exact configuration will differ per map.
+
+All gauntlets allow the player to scavenge random parts as they kill enemies. The chance of an enemy dropping a part is based on their 'toughness', e.g. basic MTs have a 2% chance to drop a part, whereas a EKDROMOI has a 25% chance to drop a part.
+
+Bosses will always drop a part, plus any unique loot associated with the boss.
+
+[color=#ffe599][size=3][b]Grid 135[/b][/size][/color]
+Face up to fifteen waves of enemies, with three bosses on every fifth wave.
+There are five Supply Sherpas available during the trial.
+Each boss wave will reward you with a specific amount of COAM:
+- 5th wave: +100,000
+- 10th wave: +200,000
+- 15th wave: +300,000
+
+Completing the gauntlet will grant you an unique Head part.
+
+[color=#ffe599][size=3][b]Bona Dea Dunes[/b][/size][/color]
+Face up to five waves of enemies, with a boss on the fifth wave.
+There is one Supply Sherpa available during the trial.
+The boss wave will reward you with 200,000 COAM.
+
+Completing the gauntlet will grant you an unique Legs part.
+
+[color=#9fc5e8][size=4][b]Notes[/b][/size][/color]
+The gauntlets re-purpose the training maps, so you cannot access the training missions with this mod installed.
+
+[color=#9fc5e8][size=4][b]Links[/b][/size][/color]
+[url=https://github.com/vawser/Gauntlet-AC6]Github Repository[/url]

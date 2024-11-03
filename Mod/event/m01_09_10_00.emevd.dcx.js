@@ -8,8 +8,6 @@
 // ==/EMEVD==
 
 Event(0, Default, function() {
-    //AwardItemLot(20010);
-    
     // Map Boundary
     ActivateHit(50604205, Enabled);
     
@@ -108,8 +106,8 @@ Event(3000, Default, function() {
     // Waves
     //=================================================
     // Wave 1 - Tetrapods + Guard Mechs
-    //InitializeEvent(0, 3001, 0);
-    //InitializeEvent(1, 3200, 5301);
+    InitializeEvent(0, 3001, 0);
+    InitializeEvent(1, 3200, 5301);
     
     // Wave 2 - Light Cavalry
     InitializeEvent(0, 3002, 0);
@@ -455,4 +453,3 @@ Event(3200, Default, function(X0_4) {
     
     EndUnconditionally(EventEndType.Restart);
 });
-

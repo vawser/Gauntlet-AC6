@@ -8,8 +8,6 @@
 // ==/EMEVD==
 
 Event(0, Default, function() {
-    //AwardItemLot(20000);
-    
     //===============
     // Trial System
     //===============
@@ -874,6 +872,7 @@ Event(3013, Default, function() {
     ChangeCharacterEnableState(267, Enabled);
     ChangeCharacterEnableState(267, Enabled);
     ChangeCharacterEnableState(268, Enabled);
+    ChangeCharacterEnableState(269, Enabled);
     
     // Wave Duration
     IfCharacterRatioDeadalive(OR_01, 5313, DeathState.Dead, Equal, 1);
@@ -1073,4 +1072,3 @@ Event(3200, Default, function(X0_4) {
     
     EndUnconditionally(EventEndType.Restart);
 });
-
